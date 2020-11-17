@@ -1,0 +1,56 @@
+﻿@using FenzyCars.Data.Models
+
+@model CarsAddViewModel
+
+<section class="py-5">
+    <div class="container">
+        <h1 style="margin: 2%; text-align: center;">Add Car</h1>
+        <div style="padding: 5%;">
+            <form method="post">
+                <div class="form-group">
+                    <label for="Make">Make</label>
+                    <input type="text" class="form-control" id="Make" name="Make" placeholder="Enter make">
+                </div>
+                <div class="form-group">
+                    <label for="Model">Model</label>
+                    <input type="text" class="form-control" id="Model" name="Model" placeholder="Enter model">
+                </div>
+                <div class="form-group">
+                    <label for="Hp">Hp</label>
+                    <input type="text" class="form-control" id="Hp" name="Hp" placeholder="Enter hp">
+                </div>
+                <div class="form-group">
+                    <label for="imagePath">Car Image //TODO</label>
+                    <input type="text" class="form-control" id="imagePath" name="imagePath" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label for="Seats">Seats</label>
+                    <input min="1" max="7" type="number" class="form-control" id="Seats" name="Seats" placeholder="Enter number of seats">
+                </div>
+                <div class="form-group">
+                    <label for="Mileage">Mileage</label>
+                    <input type="text" class="form-control" id="Mileage" name="Mileage" placeholder="Enter mileage of the car">
+                </div>
+                <div class="form-group">
+                    <label for="Doors">Doors</label>
+                    <input min="2" max="6" type="number" class="form-control" id="Doors" name="Doors" placeholder="Enter number of doors  ">
+                </div>
+                <div class="form-group">
+                    <label for="Transmission">Transmisson</label>
+                    @Html.DropDownListFor(x => x.Transmission,
+            new SelectList(Enum.GetValues(typeof(Transmission))),
+            "Select Transmission",
+            new { @class = "form-control" })
+                </div>
+                <div class="form-group"></div>
+                <label for="EngineSize">Engine Size</label>
+                <input type="text" class="form-control" id="EngineSize" name="EngineSize" placeholder="Enter engine size(cc)" />
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    <input type="text" class="form-control" id="Description" name="Description" placeholder="Enter description">
+                </div>
+                <button type="submit" class="btn btn-info text-uppercase">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

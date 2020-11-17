@@ -1,0 +1,4 @@
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.AssemblyInfo.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.csproj.CoreCompileInputs.cache

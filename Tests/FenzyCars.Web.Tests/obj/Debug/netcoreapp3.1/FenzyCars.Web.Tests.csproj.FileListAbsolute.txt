@@ -1,0 +1,5 @@
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Web.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Web.Tests.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Web.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Web.Tests.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Web.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Web.Tests.AssemblyInfo.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Web.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Web.Tests.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Web.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Web.Tests.MvcApplicationPartsAssemblyInfo.cache

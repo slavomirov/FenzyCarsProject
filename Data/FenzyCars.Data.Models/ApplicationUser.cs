@@ -3,6 +3,7 @@ namespace FenzyCars.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using FenzyCars.Data.Common.Models;
 
@@ -16,7 +17,29 @@ namespace FenzyCars.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.CountOfPosts = 0;
         }
+
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+        //[Required]
+        //[EmailAddress]
+        //public string Email { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string TelephoneNumber { get; set; }
+
+        [Required]
+        public string CityLiving { get; set; }
+
+        public int CountOfPosts { get; set; }
+
+        public ICollection<UserCar> UserCars { get; set; }
 
         // Audit info
         public DateTime CreatedOn { get; set; }

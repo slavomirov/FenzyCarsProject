@@ -1,0 +1,8 @@
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\bin\Debug\netstandard2.1\FenzyCars.Services.deps.json
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\bin\Debug\netstandard2.1\FenzyCars.Services.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\bin\Debug\netstandard2.1\FenzyCars.Services.pdb
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Debug\netstandard2.1\FenzyCars.Services.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Debug\netstandard2.1\FenzyCars.Services.AssemblyInfo.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Debug\netstandard2.1\FenzyCars.Services.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Debug\netstandard2.1\FenzyCars.Services.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Debug\netstandard2.1\FenzyCars.Services.pdb

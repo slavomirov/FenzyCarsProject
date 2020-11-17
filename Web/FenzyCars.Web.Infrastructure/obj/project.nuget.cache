@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YUZjZOqQSExtJ++dX4qGiM6BlCcbsm5gtk902urcGaoNvfeXSStxnszfo9lb1ZmEysSjv3ip6iuvH/9nv/GxnQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\spart\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\spart\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+  ],
+  "logs": []
+}

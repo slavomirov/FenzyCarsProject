@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\FenzyCars.Data.Common\FenzyCars.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\FenzyCars.Data.Models\FenzyCars.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\FenzyCars.Data\FenzyCars.Data.csproj" />
     <ProjectReference Include="..\FenzyCars.Services.Mapping\FenzyCars.Services.Mapping.csproj" />
   </ItemGroup>
 
