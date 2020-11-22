@@ -456,4 +456,10 @@ C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.pdb
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.genruntimeconfig.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\FenzyCars.Web.styles.css
-C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Add.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\Add.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs

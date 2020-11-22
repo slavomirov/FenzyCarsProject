@@ -21,18 +21,12 @@ namespace FenzyCars.Data.Models
         }
 
         [Required]
+        [MaxLength(20)]
         public string FirstName { get; set; }
 
         [Required]
+        [MaxLength(20)]
         public string LastName { get; set; }
-
-        //[Required]
-        //[EmailAddress]
-        //public string Email { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string TelephoneNumber { get; set; }
 
         [Required]
         public string CityLiving { get; set; }

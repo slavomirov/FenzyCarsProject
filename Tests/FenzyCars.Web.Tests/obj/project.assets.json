@@ -3501,12 +3501,13 @@
       },
       "FenzyCars.Services.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "FenzyCars.Data": "1.0.0",
           "FenzyCars.Data.Common": "1.0.0",
           "FenzyCars.Data.Models": "1.0.0",
-          "FenzyCars.Services.Mapping": "1.0.0"
+          "FenzyCars.Services.Mapping": "1.0.0",
+          "FenzyCars.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/FenzyCars.Services.Data.dll": {}
@@ -3556,8 +3557,10 @@
           "FenzyCars.Web.Infrastructure": "1.0.0",
           "FenzyCars.Web.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.9",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9",
           "Microsoft.AspNetCore.Identity.UI": "3.1.9",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Microsoft.Web.LibraryManager.Build": "2.1.113"
         },

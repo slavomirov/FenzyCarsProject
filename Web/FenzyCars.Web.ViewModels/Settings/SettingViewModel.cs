@@ -1,9 +1,8 @@
 ﻿namespace FenzyCars.Web.ViewModels.Settings
 {
+    using AutoMapper;
     using FenzyCars.Data.Models;
     using FenzyCars.Services.Mapping;
-
-    using AutoMapper;
 
     public class SettingViewModel : IMapFrom<Setting>, IHaveCustomMappings
     {

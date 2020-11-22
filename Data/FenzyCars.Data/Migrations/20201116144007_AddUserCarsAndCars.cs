@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace FenzyCars.Data.Migrations
+﻿namespace FenzyCars.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class AddUserCarsAndCars : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -58,7 +59,7 @@ namespace FenzyCars.Data.Migrations
                     Description = table.Column<string>(nullable: false),
                     PhotoURL = table.Column<string>(nullable: false),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    DeletedOn = table.Column<DateTime>(nullable: true)
+                    DeletedOn = table.Column<DateTime>(nullable: true),
                 },
                 constraints: table =>
                 {
@@ -72,7 +73,7 @@ namespace FenzyCars.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(nullable: true),
-                    CarId = table.Column<int>(nullable: false)
+                    CarId = table.Column<int>(nullable: false),
                 },
                 constraints: table =>
                 {

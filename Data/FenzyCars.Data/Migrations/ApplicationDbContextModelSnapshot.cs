@@ -94,14 +94,16 @@ namespace FenzyCars.Data.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -132,11 +134,6 @@ namespace FenzyCars.Data.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TelephoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
-
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
@@ -166,9 +163,8 @@ namespace FenzyCars.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("BodyType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("BodyType")
+                        .HasColumnType("int");
 
                     b.Property<string>("Color")
                         .IsRequired()
@@ -187,9 +183,8 @@ namespace FenzyCars.Data.Migrations
                     b.Property<int>("EngineSize")
                         .HasColumnType("int");
 
-                    b.Property<string>("FuelType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("FuelType")
+                        .HasColumnType("int");
 
                     b.Property<int>("Hp")
                         .HasColumnType("int");
@@ -215,9 +210,8 @@ namespace FenzyCars.Data.Migrations
                     b.Property<int>("Seats")
                         .HasColumnType("int");
 
-                    b.Property<string>("Transmission")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Transmission")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

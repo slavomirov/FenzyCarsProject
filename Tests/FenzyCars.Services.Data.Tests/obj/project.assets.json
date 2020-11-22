@@ -2690,12 +2690,13 @@
       },
       "FenzyCars.Services.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "FenzyCars.Data": "1.0.0",
           "FenzyCars.Data.Common": "1.0.0",
           "FenzyCars.Data.Models": "1.0.0",
-          "FenzyCars.Services.Mapping": "1.0.0"
+          "FenzyCars.Services.Mapping": "1.0.0",
+          "FenzyCars.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/FenzyCars.Services.Data.dll": {}
@@ -2715,6 +2716,20 @@
         },
         "runtime": {
           "bin/placeholder/FenzyCars.Services.Mapping.dll": {}
+        }
+      },
+      "FenzyCars.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "FenzyCars.Data.Models": "1.0.0",
+          "FenzyCars.Services.Mapping": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FenzyCars.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FenzyCars.Web.ViewModels.dll": {}
         }
       }
     }
@@ -8637,6 +8652,11 @@
       "type": "project",
       "path": "../../Services/FenzyCars.Services.Mapping/FenzyCars.Services.Mapping.csproj",
       "msbuildProject": "../../Services/FenzyCars.Services.Mapping/FenzyCars.Services.Mapping.csproj"
+    },
+    "FenzyCars.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/FenzyCars.Web.ViewModels/FenzyCars.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/FenzyCars.Web.ViewModels/FenzyCars.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {

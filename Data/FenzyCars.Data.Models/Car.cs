@@ -5,6 +5,7 @@
     using System.ComponentModel.DataAnnotations;
 
     using FenzyCars.Data.Common.Models;
+    using FenzyCars.Data.Models.Enums;
 
     public class Car : IDeletableEntity
     {
@@ -27,16 +28,18 @@
         public string Color { get; set; }
 
         [Required]
+        [Range(0, 1000)]
         public int Hp { get; set; }
 
         [Required]
+        [Range(0, int.MaxValue)]
         public int Mileage { get; set; }
 
         [Required]
-        public string BodyType { get; set; }
+        public BodyType BodyType { get; set; }
 
         [Required]
-        public string FuelType { get; set; }
+        public FuelType FuelType { get; set; }
 
         [Required]
         [Range(1, 7)]
@@ -55,7 +58,7 @@
         [Required]
         public string Description { get; set; }
 
-        //TODO: PHOTO
+        // TODO: PHOTO
         [Required]
         public string PhotoURL { get; set; }
 

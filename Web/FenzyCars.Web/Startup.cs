@@ -4,9 +4,7 @@
 
     using FenzyCars.Data;
     using FenzyCars.Data.Common;
-    using FenzyCars.Data.Common.Repositories;
     using FenzyCars.Data.Models;
-    using FenzyCars.Data.Repositories;
     using FenzyCars.Data.Seeding;
     using FenzyCars.Services.Data;
     using FenzyCars.Services.Mapping;
@@ -57,13 +55,11 @@
             services.AddSingleton(this.configuration);
 
             // Data repositories
-            services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
-            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
-            services.AddTransient<ISettingsService, SettingsService>();
+            services.AddTransient<ICarsService, CarsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -86,7 +82,8 @@
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                // was /home/error
+                app.UseExceptionHandler("/Shared/Error");
                 app.UseHsts();
             }
 
