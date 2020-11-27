@@ -7,16 +7,13 @@
     using FenzyCars.Data.Common.Models;
     using FenzyCars.Data.Models.Enums;
 
-    public class Car : IDeletableEntity
+    public class Car : BaseDeletableModel<int>
     {
         public Car()
         {
             this.UserCars = new HashSet<UserCar>();
+            this.Images = new HashSet<Image>();
         }
-
-        [Required]
-        [Key]
-        public int Id { get; set; }
 
         [Required]
         public string Make { get; set; }
@@ -58,14 +55,9 @@
         [Required]
         public string Description { get; set; }
 
-        // TODO: PHOTO
         [Required]
-        public string PhotoURL { get; set; }
+        public ICollection<Image> Images { get; set; }
 
         public ICollection<UserCar> UserCars { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
     }
 }

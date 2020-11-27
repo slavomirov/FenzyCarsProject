@@ -164,3 +164,5 @@ C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Services.Data.Tests\obj\
 C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Services.Data.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.Tests.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Services.Data.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.Tests.pdb
 C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Services.Data.Tests\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.Tests.genruntimeconfig.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Services.Data.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Tests\FenzyCars.Services.Data.Tests\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

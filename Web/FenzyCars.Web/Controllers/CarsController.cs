@@ -1,22 +1,27 @@
 ﻿namespace FenzyCars.Web.Controllers
 {
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+
     using FenzyCars.Data;
     using FenzyCars.Data.Models;
     using FenzyCars.Services.Data;
     using FenzyCars.Web.ViewModels;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
-    using System.Security.Claims;
 
     public class CarsController : BaseController
     {
         private readonly ApplicationDbContext dbContext;
         private readonly ICarsService carsService;
+        private readonly IWebHostEnvironment environment;
 
-        public CarsController(ApplicationDbContext dbContext, ICarsService carsService)
+        public CarsController(ApplicationDbContext dbContext, ICarsService carsService, IWebHostEnvironment webHostEnvironment)
         {
             this.dbContext = dbContext;
             this.carsService = carsService;
+            this.environment = webHostEnvironment;
         }
 
         [Authorize]
@@ -27,10 +32,11 @@
 
         [HttpPost]
         [Authorize]
-        public IActionResult Add(CarsAddViewModel input)
+        public async Task<IActionResult> Add(CarsAddViewModel input)
         {
             if (!this.ModelState.IsValid)
             {
+                // TODO: ADD ERRORS!
                 return this.Redirect("/Shared/Error");
             }
 
@@ -41,7 +47,14 @@
                 input.UserId = userId;
             }
 
-            this.carsService.Add(input);
+            try
+            {
+                await this.carsService.AddAsync(input, $"{this.environment.WebRootPath}/images");
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
 
             return this.Redirect("/");
         }

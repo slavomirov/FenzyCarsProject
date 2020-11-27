@@ -1,12 +1,19 @@
 ﻿namespace FenzyCars.Web.ViewModels
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using FenzyCars.Data.Models;
     using FenzyCars.Data.Models.Enums;
+    using Microsoft.AspNetCore.Http;
 
     public class CarsAddViewModel
     {
+        public CarsAddViewModel()
+        {
+            this.Images = new HashSet<IFormFile>();
+        }
+
         [Required]
         public string Make { get; set; }
 
@@ -47,7 +54,8 @@
         [Required]
         public string Description { get; set; }
 
-        public string PhotoURL { get; set; }
+        [Required]
+        public IEnumerable<IFormFile> Images { get; set; }
 
         public string UserId { get; set; }
     }

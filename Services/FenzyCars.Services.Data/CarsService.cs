@@ -1,13 +1,19 @@
 ﻿namespace FenzyCars.Services.Data
 {
+    using System;
+    using System.IO;
+    using System.Linq;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+
     using FenzyCars.Data;
     using FenzyCars.Data.Models;
     using FenzyCars.Web.ViewModels;
     using Microsoft.AspNetCore.Identity;
-    using System.Security.Claims;
 
     public class CarsService : ICarsService
     {
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
         private readonly ApplicationDbContext dbContext;
         private readonly Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager;
 
@@ -17,7 +23,7 @@
             this.userManager = userManager;
         }
 
-        public async void Add(CarsAddViewModel input)
+        public async Task AddAsync(CarsAddViewModel input, string imagePath)
         {
             var car = new Car
             {
@@ -31,7 +37,6 @@
                 Make = input.Make,
                 Mileage = input.Mileage,
                 Model = input.Model,
-                PhotoURL = input.PhotoURL,
                 Seats = input.Seats,
                 Transmission = input.Transmission,
             };
@@ -42,10 +47,38 @@
                 UserId = input.UserId,
             };
 
+            Directory.CreateDirectory($"{imagePath}/cars/");
+
+            foreach (var image in input.Images)
+            {
+                var extension = Path.GetExtension(image.FileName).TrimStart('.');
+
+                if (!this.allowedExtensions.Any(x => extension.EndsWith(x)))
+                {
+                    throw new Exception($"Invalid image extension {extension}");
+                }
+
+                var dbImage = new Image
+                {
+                    AddedByUserId = input.UserId,
+                    Extension = extension,
+                    CarId = car.Id,
+                };
+
+                car.Images.Add(dbImage);
+
+                var physicalPath = $"{imagePath}/cars/{dbImage.Id}.{extension}";
+                using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+                await image.CopyToAsync(fileStream);
+            }
+
+            var user = this.dbContext.Users.FirstOrDefault(x => x.Id == input.UserId);
+            user.CountOfPosts++;
+
             car.UserCars.Add(userCars);
 
-            this.dbContext.Cars.Add(car);
-            this.dbContext.SaveChanges();
+            await this.dbContext.Cars.AddAsync(car);
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }
