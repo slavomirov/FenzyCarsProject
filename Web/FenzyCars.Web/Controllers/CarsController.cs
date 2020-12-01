@@ -53,7 +53,7 @@
             }
             catch (System.Exception)
             {
-                throw;
+                return this.Redirect("/Error");
             }
 
             return this.Redirect("/");

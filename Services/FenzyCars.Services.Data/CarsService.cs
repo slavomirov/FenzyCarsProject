@@ -71,7 +71,9 @@
                 car.Images.Add(dbImage);
 
                 var physicalPath = $"{imagePath}/cars/{dbImage.Id}.{extension}";
-                dbImage.RemoteImageUrl = physicalPath;
+
+                // "/images/cars/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension
+                dbImage.RemoteImageUrl = "/images/cars/" + dbImage.Id + "." + dbImage.Extension;
                 using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
                 await image.CopyToAsync(fileStream);
             }
