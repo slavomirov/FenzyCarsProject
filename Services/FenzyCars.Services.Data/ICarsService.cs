@@ -13,5 +13,7 @@
         IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 2);
 
         int GetCount();
+
+        CarsByIdViewModel ById(int id);
     }
 }

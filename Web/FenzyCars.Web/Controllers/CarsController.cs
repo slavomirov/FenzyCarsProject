@@ -61,6 +61,11 @@
 
         public IActionResult All(int id = 1)
         {
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
             const int itemsPerPage = 2;
             var viewModel = new CarsListViewModel
             {
@@ -71,6 +76,13 @@
             };
 
             return this.View(viewModel);
+        }
+
+        public IActionResult ById(int id)
+        {
+            var car = this.carsService.ById(id);
+
+            return this.View(car);
         }
     }
 }

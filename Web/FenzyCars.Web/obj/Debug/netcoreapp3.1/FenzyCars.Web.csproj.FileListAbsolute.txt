@@ -464,3 +464,4 @@ C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\All.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cars\ById.cshtml.g.cs

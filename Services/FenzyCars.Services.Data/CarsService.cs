@@ -85,6 +85,16 @@
             await this.dbContext.SaveChangesAsync();
         }
 
+        public CarsByIdViewModel ById(int id)
+        {
+            var car = this.dbContext.Cars
+                .Where(x => x.Id == id)
+                .To<CarsByIdViewModel>()
+                .FirstOrDefault();
+
+            return car;
+        }
+
         public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 2)
         {
             var cars = this.dbContext.Cars.AsNoTracking()
