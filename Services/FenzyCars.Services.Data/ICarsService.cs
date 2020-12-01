@@ -1,5 +1,6 @@
 ﻿namespace FenzyCars.Services.Data
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     using FenzyCars.Data.Models;
@@ -8,5 +9,9 @@
     public interface ICarsService
     {
         Task AddAsync(CarsAddViewModel input, string imagePath);
+
+        IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 2);
+
+        int GetCount();
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace FenzyCars.Services.Data
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Security.Claims;
@@ -8,8 +9,10 @@
 
     using FenzyCars.Data;
     using FenzyCars.Data.Models;
+    using FenzyCars.Services.Mapping;
     using FenzyCars.Web.ViewModels;
     using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
 
     public class CarsService : ICarsService
     {
@@ -68,6 +71,7 @@
                 car.Images.Add(dbImage);
 
                 var physicalPath = $"{imagePath}/cars/{dbImage.Id}.{extension}";
+                dbImage.RemoteImageUrl = physicalPath;
                 using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
                 await image.CopyToAsync(fileStream);
             }
@@ -79,6 +83,23 @@
 
             await this.dbContext.Cars.AddAsync(car);
             await this.dbContext.SaveChangesAsync();
+        }
+
+        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 2)
+        {
+            var cars = this.dbContext.Cars.AsNoTracking()
+                .OrderByDescending(x => x.Id)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<T>()
+                .ToList();
+
+            return cars;
+        }
+
+        public int GetCount()
+        {
+            return this.dbContext.Cars.Count();
         }
     }
 }

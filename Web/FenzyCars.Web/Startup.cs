@@ -83,7 +83,7 @@
             else
             {
                 // was /home/error
-                app.UseExceptionHandler("/Shared/Error");
+                app.UseExceptionHandler("/error");
                 app.UseHsts();
             }
 

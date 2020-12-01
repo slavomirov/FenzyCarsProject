@@ -37,7 +37,7 @@
             if (!this.ModelState.IsValid)
             {
                 // TODO: ADD ERRORS!
-                return this.Redirect("/Shared/Error");
+                return this.Redirect("/error");
             }
 
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -57,6 +57,20 @@
             }
 
             return this.Redirect("/");
+        }
+
+        public IActionResult All(int id = 1)
+        {
+            const int itemsPerPage = 2;
+            var viewModel = new CarsListViewModel
+            {
+                ItemsPerPage = itemsPerPage,
+                PageNumber = id,
+                CarsCount = this.carsService.GetCount(),
+                Cars = this.carsService.GetAll<CarsInListViewModel>(id),
+            };
+
+            return this.View(viewModel);
         }
     }
 }

@@ -20,6 +20,7 @@
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        [Route("/error")]
         public IActionResult Error()
         {
             return this.View(

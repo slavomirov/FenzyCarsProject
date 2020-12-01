@@ -1,16 +1,19 @@
 ﻿namespace FenzyCars.Data.Models.Enums
 {
+    using System;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
 
     public enum BodyType
     {
         Coupe,
         Hatchback,
         Minibus,
-        Pick_Up,
+        PickUp,
         Sports,
         Saloon,
-        [Display(Name = "Five Door Hatchback")]
-        Five_Door_Hatchback,
+        [Description("Five Door Hatchback")]
+        FiveDoorHatchback,
     }
 }
