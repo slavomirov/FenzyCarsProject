@@ -1,0 +1,97 @@
+﻿@{
+    this.ViewData["Title"] = "Search";
+}
+
+@using FenzyCars.Data.Models.Enums;
+
+<h1>@this.ViewData["Title"]</h1>
+<hr />
+
+@model CarsSearchViewModel
+
+<section class="py-5">
+    <div class="container">
+        <div style="padding: 5%;">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Make"></label>
+                    <input asp-for="Make" class="form-control" value="All" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Model"></label>
+                    <input asp-for="Model" class="form-control" value="All" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Color"></label>
+                    <input asp-for="Color" class="form-control" value="All" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MinMileage"></label>
+                    <input asp-for="MinMileage" class="form-control" type="number" min="0" value="0" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxMileage"></label>
+                    <input asp-for="MaxMileage" class="form-control" type="number" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Seats"></label>
+                    <input asp-for="Seats" class="form-control" type="number" min="0" max="7" value="0" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Doors"></label>
+                    <input asp-for="Doors" class="form-control" type="number" min="0" max="6" value="0" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Transmission">Transmisson</label>
+                    @Html.DropDownListFor(x => x.Transmission,
+                    new SelectList(Enum.GetValues(typeof(Transmission))),
+                    "Select Transmission",
+                    new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="BodyType">Body Type</label>
+                    @Html.DropDownListFor(x => x.BodyType,
+                    new SelectList(Enum.GetValues(typeof(BodyType))),
+                    "Select Body Type",
+                    new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="FuelType">Fuel Type</label>
+                    @Html.DropDownListFor(x => x.FuelType,
+                    new SelectList(Enum.GetValues(typeof(FuelType))),
+                    "Select Fuel Type",
+                    new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="MinEngineSize">Minimum engine size</label>
+                    <input asp-for="MinEngineSize" class="form-control" type="number" min="0" value="0" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxEngineSize">Maximum engine size</label>
+                    <input asp-for="MaxEngineSize" class="form-control" value="9999" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MinYear">Minimum year</label>
+                    <input asp-for="MinYear" class="form-control" type="number" min="1900" max="@DateTime.Now.Year" value="1900" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxYear">Maximum year</label>
+                    <input asp-for="MaxYear" class="form-control" value="@DateTime.Now.Year" min="1900" max="@DateTime.Now.Year" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MinPrice">Minimum price</label>
+                    <input asp-for="MinPrice" class="form-control" value="0" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxPrice">Maximum price</label>
+                    <input asp-for="MaxPrice" class="form-control" value="999999" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="City"></label>
+                    <input asp-for="City" class="form-control" value="All" />
+                </div>
+                <button type="submit" class="btn btn-info text-uppercase">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

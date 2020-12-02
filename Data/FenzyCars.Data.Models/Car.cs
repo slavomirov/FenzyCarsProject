@@ -53,7 +53,13 @@
         public int EngineSize { get; set; }
 
         [Required]
+        public int Year { get; set; }
+
+        [Required]
         public string Description { get; set; }
+
+        [Required]
+        public int Price { get; set; }
 
         [Required]
         public ICollection<Image> Images { get; set; }

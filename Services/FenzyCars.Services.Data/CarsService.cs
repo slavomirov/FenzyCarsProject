@@ -42,6 +42,8 @@
                 Model = input.Model,
                 Seats = input.Seats,
                 Transmission = input.Transmission,
+                Price = input.Price,
+                Year = input.Year,
             };
 
             var userCars = new UserCar
@@ -97,7 +99,7 @@
             return car;
         }
 
-        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 2)
+        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 3)
         {
             var cars = this.dbContext.Cars.AsNoTracking()
                 .OrderByDescending(x => x.Id)
@@ -112,6 +114,118 @@
         public int GetCount()
         {
             return this.dbContext.Cars.Count();
+        }
+
+        public ICollection<CarsByIdViewModel> Search(CarsSearchViewModel input)
+        {
+            var cars = this.dbContext.Cars.AsNoTracking()
+                .OrderByDescending(x => x.Id)
+                .To<CarsByIdViewModel>()
+                .ToList();
+
+            cars = Search(input, cars);
+
+            return cars;
+        }
+
+        private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)
+        {
+            if (input.BodyType != null)
+            {
+                cars = cars.Where(x => x.BodyType == input.BodyType).ToList();
+            }
+
+            if (input.City != null)
+            {
+                cars = cars.Where(x => x.User.CityLiving == input.City).ToList();
+            }
+
+            if (input.Color != null)
+            {
+                cars = cars.Where(x => x.Color == input.Color).ToList();
+            }
+
+            if (input.Doors != null && input.Doors != 0)
+            {
+                cars = cars.Where(x => x.Doors == input.Doors).ToList();
+            }
+
+            if (input.FuelType != null)
+            {
+                cars = cars.Where(x => x.FuelType == input.FuelType).ToList();
+            }
+
+            if (input.Seats != null && input.Seats != 0)
+            {
+                cars = cars.Where(x => x.Seats == input.Seats).ToList();
+            }
+
+            if (input.Transmission != null)
+            {
+                cars = cars.Where(x => x.Transmission == input.Transmission).ToList();
+            }
+
+            if (input.Make != "All" && input.Make != null)
+            {
+                cars = cars.Where(x => x.Make.ToLower() == input.Make.ToLower()).ToList();
+            }
+
+            if (input.Model != "All" && input.Make != null)
+            {
+                cars = cars.Where(x => x.Model.ToLower() == input.Model.ToLower()).ToList();
+            }
+
+            if (input.MinEngineSize != null)
+            {
+                cars = cars.Where(x => x.EngineSize >= input.MinEngineSize).ToList();
+            }
+
+            if (input.MaxEngineSize != null)
+            {
+                cars = cars.Where(x => x.EngineSize <= input.MaxEngineSize).ToList();
+            }
+
+            if (input.MinHp != null)
+            {
+                cars = cars.Where(x => x.Hp >= input.MinHp).ToList();
+            }
+
+            if (input.MaxHp != null)
+            {
+                cars = cars.Where(x => x.Hp <= input.MaxHp).ToList();
+            }
+
+            if (input.MinYear != null)
+            {
+                cars = cars.Where(x => x.Year >= input.MinYear).ToList();
+            }
+
+            if (input.MaxYear != null)
+            {
+                cars = cars.Where(x => x.Year <= input.MaxYear).ToList();
+            }
+
+            if (input.MinMileage != null)
+            {
+                cars = cars.Where(x => x.Mileage >= input.MinMileage).ToList();
+            }
+
+            if (input.MaxMileage != null)
+            {
+                cars = cars.Where(x => x.Mileage <= input.MaxMileage).ToList();
+            }
+
+            if (input.MinPrice != null)
+            {
+                cars = cars.Where(x => x.Mileage >= input.MinPrice).ToList();
+            }
+
+            if (input.MaxPrice != null)
+            {
+                cars = cars.Where(x => x.Mileage <= input.MaxPrice).ToList();
+            }
+
+            return cars;
         }
     }
 }

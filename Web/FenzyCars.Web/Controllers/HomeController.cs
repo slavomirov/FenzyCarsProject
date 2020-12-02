@@ -2,16 +2,37 @@
 {
     using System.Diagnostics;
 
+    using FenzyCars.Services.Data;
     using FenzyCars.Web.ViewModels;
-
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
     {
-        [HttpGet("/")]
-        public IActionResult Index()
+        private readonly ICarsService carsService;
+
+        public HomeController(ICarsService carsService)
         {
-            return this.View();
+            this.carsService = carsService;
+        }
+
+        [HttpGet("/")]
+        public IActionResult Index(int id = 1)
+        {
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            const int itemsPerPage = 3;
+            var viewModel = new CarsListViewModel
+            {
+                ItemsPerPage = itemsPerPage,
+                PageNumber = id,
+                CarsCount = this.carsService.GetCount(),
+                Cars = this.carsService.GetAll<CarsInListViewModel>(id),
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Privacy()

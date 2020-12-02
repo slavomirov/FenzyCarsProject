@@ -5,6 +5,7 @@
 
     using FenzyCars.Data.Models;
     using FenzyCars.Data.Models.Enums;
+    using FenzyCars.Services.Mapping;
     using Microsoft.AspNetCore.Http;
 
     public class CarsAddViewModel
@@ -53,6 +54,12 @@
 
         [Required]
         public string Description { get; set; }
+
+        [Required]
+        public int Year { get; set; }
+
+        [Required]
+        public int Price { get; set; }
 
         [Required]
         public IEnumerable<IFormFile> Images { get; set; }

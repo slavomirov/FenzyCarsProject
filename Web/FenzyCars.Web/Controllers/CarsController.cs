@@ -1,5 +1,7 @@
 ﻿namespace FenzyCars.Web.Controllers
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
@@ -53,10 +55,18 @@
             }
             catch (System.Exception)
             {
-                return this.Redirect("/Error");
+                return this.Redirect("/error");
             }
 
+            this.TempData["Message"] = "Car added successfully.";
             return this.Redirect("/");
+        }
+
+        public IActionResult ById(int id)
+        {
+            var car = this.carsService.ById(id);
+
+            return this.View(car);
         }
 
         public IActionResult All(int id = 1)
@@ -78,11 +88,22 @@
             return this.View(viewModel);
         }
 
-        public IActionResult ById(int id)
+        public IActionResult Search()
         {
-            var car = this.carsService.ById(id);
+            return this.View();
+        }
 
-            return this.View(car);
+        [HttpPost]
+        public IActionResult Search(CarsSearchViewModel viewModel)
+        {
+            var cars = this.carsService.Search(viewModel);
+
+            return this.Redirect("/Cars/ResultFromSearch");
+        }
+
+        public IActionResult ResultFromSearch(ICollection<CarsSearchViewModel> viewModel)
+        {
+            return this.View(viewModel);
         }
     }
 }

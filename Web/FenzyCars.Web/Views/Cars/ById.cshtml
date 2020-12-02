@@ -1,0 +1,43 @@
+﻿@{
+    this.ViewData["Title"] = Model.Make + " " + Model.Model;
+}
+
+@model CarsByIdViewModel
+
+<h1>@this.ViewData["Title"]</h1>
+<hr />
+
+<div class="row ">
+    @foreach (var image in this.Model.Images)
+    {
+        <div class="w-auto p-0 media col-sm-5">
+            <img src="@image.RemoteImageUrl" class="w-100 rounded float-right img-responsive">
+        </div>
+    }
+</div>
+
+<h4>Price: @Model.Price</h4>
+<hr />
+
+<h5>Engine size: @Model.EngineSize</h5>
+<h5>Horsepower: @Model.Hp</h5>
+<h5>Fuel: @Model.FuelType</h5>
+
+<hr />
+
+<h5>Body: @Model.BodyType</h5>
+<h5>Seats: @Model.Seats</h5>
+<h5>Color: @Model.Color</h5>
+<h5>Transmission: @Model.Transmission</h5>
+<h5>Mileage: @Model.Mileage km</h5>
+<h5>Year: @Model.Year</h5>
+
+<hr />
+
+<h5>Description: @Model.Description</h5>
+
+@Model.User.CityLiving
+<br />
+@Model.User.FirstName @Model.User.LastName
+<br />
+@Model.User.PhoneNumber

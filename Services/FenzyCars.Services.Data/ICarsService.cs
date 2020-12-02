@@ -10,10 +10,12 @@
     {
         Task AddAsync(CarsAddViewModel input, string imagePath);
 
-        IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 2);
+        IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 3);
 
         int GetCount();
 
         CarsByIdViewModel ById(int id);
+
+        public ICollection<CarsByIdViewModel> Search(CarsSearchViewModel input);
     }
 }
