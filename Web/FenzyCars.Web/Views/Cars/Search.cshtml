@@ -15,19 +15,19 @@
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label asp-for="Make"></label>
-                    <input asp-for="Make" class="form-control" value="All" />
+                    <input asp-for="Make" class="form-control"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="Model"></label>
-                    <input asp-for="Model" class="form-control" value="All" />
+                    <input asp-for="Model" class="form-control"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="Color"></label>
-                    <input asp-for="Color" class="form-control" value="All" />
+                    <input asp-for="Color" class="form-control"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="MinMileage"></label>
-                    <input asp-for="MinMileage" class="form-control" type="number" min="0" value="0" />
+                    <input asp-for="MinMileage" class="form-control" type="number" min="0"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxMileage"></label>
@@ -35,11 +35,11 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Seats"></label>
-                    <input asp-for="Seats" class="form-control" type="number" min="0" max="7" value="0" />
+                    <input asp-for="Seats" class="form-control" type="number" min="0" max="7"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="Doors"></label>
-                    <input asp-for="Doors" class="form-control" type="number" min="0" max="6" value="0" />
+                    <input asp-for="Doors" class="form-control" type="number" min="0" max="6"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="Transmission">Transmisson</label>
@@ -64,31 +64,39 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="MinEngineSize">Minimum engine size</label>
-                    <input asp-for="MinEngineSize" class="form-control" type="number" min="0" value="0" />
+                    <input asp-for="MinEngineSize" class="form-control" type="number" min="0"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxEngineSize">Maximum engine size</label>
-                    <input asp-for="MaxEngineSize" class="form-control" value="9999" />
+                    <input asp-for="MaxEngineSize" class="form-control"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="MinYear">Minimum year</label>
-                    <input asp-for="MinYear" class="form-control" type="number" min="1900" max="@DateTime.Now.Year" value="1900" />
+                    <input asp-for="MinYear" class="form-control" type="number" min="1900" max="@DateTime.Now.Year"/>
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxYear">Maximum year</label>
-                    <input asp-for="MaxYear" class="form-control" value="@DateTime.Now.Year" min="1900" max="@DateTime.Now.Year" />
+                    <input asp-for="MaxYear" class="form-control" min="1900" max="@DateTime.Now.Year" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MinPrice">Minimum price</label>
-                    <input asp-for="MinPrice" class="form-control" value="0" />
+                    <input asp-for="MinPrice" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxPrice">Maximum price</label>
-                    <input asp-for="MaxPrice" class="form-control" value="999999" />
+                    <input asp-for="MaxPrice" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MinHp">Minimum horsepower</label>
+                    <input asp-for="MinHp" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="MaxHp">Maximum horsepower</label>
+                    <input asp-for="MaxHp" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="City"></label>
-                    <input asp-for="City" class="form-control" value="All" />
+                    <input asp-for="City" class="form-control" />
                 </div>
                 <button type="submit" class="btn btn-info text-uppercase">Submit</button>
             </form>

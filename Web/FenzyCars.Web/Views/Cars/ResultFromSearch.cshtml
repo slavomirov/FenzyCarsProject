@@ -1,49 +1,49 @@
-﻿@*@{
-    this.ViewData["Title"] = "Result";
-}
-
-@model ICollection<CarsSearchViewModel>
-
-<h1>@this.ViewData["Title"]</h1>
-<hr />
-
-<ul class="list-unstyled">
-    @foreach (var car in Model)
-    {
-        <li class="media">
-            <img src="@car.ImageUrl" width="250" class="mr-3 img-responsive">
-            <div class="media-body">
-                <h5 class="mt-0"><a asp-action="ById" asp-route-id="@car.Id">@string.Concat(car.Make, " ", car.Model)</a></h5>
-                @car.Description
-                <hr />
-                Price: @car.Price
-            </div>
-        </li>
-        <hr />
+﻿@{
+        this.ViewData["Title"] = "Result";
     }
-</ul>
 
-<nav aria-label="...">
-    <ul class="pagination justify-content-center">
-        @if (Model.PageNumber > 1)
+    @model ICollection<CarsByIdViewModel>
+
+    <h1>@this.ViewData["Title"]</h1>
+    <hr />
+
+    <ul class="list-unstyled">
+        @foreach (var car in Model)
         {
-            <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="1">First</a></li>
-        }
-        <li class="page-item @if (!Model.HasPreviousPage) { <text>disabled</text> }">
-            <a class="page-link" asp-action="All" asp-route-id="@Model.PreviousPageNumber">Previous</a>
-        </li>
-        <li class="page-item active" aria-current="page">
-            <span class="page-link">
-                @Model.PageNumber
-                <span class="sr-only">(current)</span>
-            </span>
-        </li>
-        <li class="page-item @if (!Model.HasNextPage) { <text>disabled</text> }">
-            <a class="page-link" asp-action="All" asp-route-id="@Model.NextPageNumber">Next</a>
-        </li>
-        @if (Model.PageNumber < Model.PagesCount)
-        {
-            <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@Model.PagesCount">Last</a></li>
+            <li class="media">
+                <img src="@car.Images.Select(x => x.RemoteImageUrl).FirstOrDefault()" width="250" class="mr-3 img-responsive">
+                <div class="media-body">
+                    <h5 class="mt-0"><a asp-action="ById" asp-route-id="@car.Id">@string.Concat(car.Make, " ", car.Model)</a></h5>
+                    @car.Description
+                    <hr />
+                    Price: @car.Price
+                </div>
+            </li>
+            <hr />
         }
     </ul>
-</nav>*@
+
+    @*<nav aria-label="...">
+        <ul class="pagination justify-content-center">
+            @if (Model.PageNumber > 1)
+            {
+                <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="1">First</a></li>
+            }
+            <li class="page-item @if (!Model.HasPreviousPage) { <text>disabled</text> }">
+                <a class="page-link" asp-action="All" asp-route-id="@Model.PreviousPageNumber">Previous</a>
+            </li>
+            <li class="page-item active" aria-current="page">
+                <span class="page-link">
+                    @Model.PageNumber
+                    <span class="sr-only">(current)</span>
+                </span>
+            </li>
+            <li class="page-item @if (!Model.HasNextPage) { <text>disabled</text> }">
+                <a class="page-link" asp-action="All" asp-route-id="@Model.NextPageNumber">Next</a>
+            </li>
+            @if (Model.PageNumber < Model.PagesCount)
+            {
+                <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@Model.PagesCount">Last</a></li>
+            }
+        </ul>
+    </nav>*@

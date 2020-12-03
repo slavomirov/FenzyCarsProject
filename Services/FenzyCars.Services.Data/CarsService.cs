@@ -137,15 +137,15 @@
 
             if (input.City != null)
             {
-                cars = cars.Where(x => x.User.CityLiving == input.City).ToList();
+                cars = cars.Where(x => x.User.CityLiving.ToLower().Contains(input.City.ToLower())).ToList();
             }
 
             if (input.Color != null)
             {
-                cars = cars.Where(x => x.Color == input.Color).ToList();
+                cars = cars.Where(x => x.Color.ToLower().Contains(input.Color.ToLower())).ToList();
             }
 
-            if (input.Doors != null && input.Doors != 0)
+            if (input.Doors != null)
             {
                 cars = cars.Where(x => x.Doors == input.Doors).ToList();
             }
@@ -155,7 +155,7 @@
                 cars = cars.Where(x => x.FuelType == input.FuelType).ToList();
             }
 
-            if (input.Seats != null && input.Seats != 0)
+            if (input.Seats != null)
             {
                 cars = cars.Where(x => x.Seats == input.Seats).ToList();
             }
@@ -165,14 +165,14 @@
                 cars = cars.Where(x => x.Transmission == input.Transmission).ToList();
             }
 
-            if (input.Make != "All" && input.Make != null)
+            if (input.Make != null)
             {
-                cars = cars.Where(x => x.Make.ToLower() == input.Make.ToLower()).ToList();
+                cars = cars.Where(x => x.Make.ToLower().Contains(input.Make.ToLower())).ToList();
             }
 
-            if (input.Model != "All" && input.Make != null)
+            if (input.Model != null)
             {
-                cars = cars.Where(x => x.Model.ToLower() == input.Model.ToLower()).ToList();
+                cars = cars.Where(x => x.Model.ToLower().Contains(input.Model.ToLower())).ToList();
             }
 
             if (input.MinEngineSize != null)

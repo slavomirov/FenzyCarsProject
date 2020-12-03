@@ -98,10 +98,10 @@
         {
             var cars = this.carsService.Search(viewModel);
 
-            return this.Redirect("/Cars/ResultFromSearch");
+            return this.View("ResultFromSearch", cars);
         }
 
-        public IActionResult ResultFromSearch(ICollection<CarsSearchViewModel> viewModel)
+        public IActionResult ResultFromSearch(ICollection<CarsByIdViewModel> viewModel)
         {
             return this.View(viewModel);
         }

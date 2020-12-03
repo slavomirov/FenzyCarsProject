@@ -16,6 +16,8 @@
             this.User = new ApplicationUser();
         }
 
+        public int Id { get; set; }
+
         public string Make { get; set; }
 
         public string Model { get; set; }
@@ -54,6 +56,11 @@
                 .ForMember(x => x.User, opt =>
                     opt.MapFrom(x =>
                     x.UserCars.FirstOrDefault().User));
+
+            // configuration.CreateMap<Car, CarsByIdViewModel>()
+            //    .ForMember(x => x.Id, opt =>
+            //        opt.MapFrom(x =>
+            //        x.Id));
         }
     }
 }
