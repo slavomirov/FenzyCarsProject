@@ -16,21 +16,9 @@
         }
 
         [HttpGet("/")]
-        public IActionResult Index(int id = 1)
+        public IActionResult Index()
         {
-            if (id <= 0)
-            {
-                return this.NotFound();
-            }
-
-            const int itemsPerPage = 3;
-            var viewModel = new CarsListViewModel
-            {
-                ItemsPerPage = itemsPerPage,
-                PageNumber = id,
-                CarsCount = this.carsService.GetCount(),
-                Cars = this.carsService.GetAll<CarsInListViewModel>(id),
-            };
+            var viewModel = this.carsService.GetRandom();
 
             return this.View(viewModel);
         }

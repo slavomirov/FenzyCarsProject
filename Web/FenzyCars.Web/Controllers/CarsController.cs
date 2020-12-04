@@ -76,7 +76,7 @@
                 return this.NotFound();
             }
 
-            const int itemsPerPage = 2;
+            const int itemsPerPage = 4;
             var viewModel = new CarsListViewModel
             {
                 ItemsPerPage = itemsPerPage,

@@ -99,7 +99,7 @@
             return car;
         }
 
-        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 3)
+        public IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 4)
         {
             var cars = this.dbContext.Cars.AsNoTracking()
                 .OrderByDescending(x => x.Id)
@@ -126,6 +126,18 @@
             cars = Search(input, cars);
 
             return cars;
+        }
+
+        public CarsInListViewModel GetRandom()
+        {
+            Random random = new Random();
+            int max = this.GetCount();
+
+            int min = random.Next(1, max);
+
+            var car = this.dbContext.Cars.Where(x => x.Id == min).To<CarsInListViewModel>().FirstOrDefault();
+
+            return car;
         }
 
         private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)

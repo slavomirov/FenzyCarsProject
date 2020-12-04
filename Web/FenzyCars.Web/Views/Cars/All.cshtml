@@ -1,4 +1,8 @@
-﻿@model CarsListViewModel
+﻿@{ 
+    this.ViewData["Title"] = "All cars";
+}
+
+@model CarsListViewModel
 
 <ul class="list-unstyled">
     @foreach (var car in Model.Cars)
@@ -10,6 +14,7 @@
                 @car.Description
                 <hr />
                 Price: @car.Price
+                City: @car.UserCity
             </div>
         </li>
         <hr />

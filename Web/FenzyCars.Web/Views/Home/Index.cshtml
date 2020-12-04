@@ -3,9 +3,12 @@
     this.ViewData["Title"] = "Home Page";
 }
 
+@model CarsInListViewModel
+
 <div class="text-center">
     <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
 </div>
+
 @if (this.TempData.ContainsKey("Message"))
 {
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -15,3 +18,33 @@
         </button>
     </div>
 }
+
+<hr />
+<h1>If you have luck under me will be a random car!</h1>
+<hr />
+
+@if (Model == null)
+{
+    <h1>...You dont have luck, sorry about that.</h1>
+    <hr />
+}
+else
+{
+    <li class="media">
+        <img src="@Model.ImageUrl" width="250" class="mr-3 img-responsive">
+        <div class="media-body">
+            <h5 class="mt-0"><a asp-action="ById" asp-route-id="@Model.Id">@string.Concat(Model.Make, " ", Model.Model)</a></h5>
+            @Model.Description
+            <hr />
+            Price: @Model.Price
+            City: @Model.UserCity   
+        </div>
+    </li>
+    <hr />
+}
+
+
+
+
+
+

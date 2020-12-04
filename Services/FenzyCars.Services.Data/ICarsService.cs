@@ -10,7 +10,9 @@
     {
         Task AddAsync(CarsAddViewModel input, string imagePath);
 
-        IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 3);
+        IEnumerable<T> GetAll<T>(int page, int itemsPerPage = 4);
+
+        CarsInListViewModel GetRandom();
 
         int GetCount();
 

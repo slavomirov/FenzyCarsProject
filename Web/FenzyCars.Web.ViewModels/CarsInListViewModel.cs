@@ -22,6 +22,8 @@
 
         public int Price { get; set; }
 
+        public string UserCity { get; set; }
+
         public void CreateMappings(IProfileExpression configuration)
         {
             configuration.CreateMap<Car, CarsInListViewModel>()
@@ -30,6 +32,10 @@
                    x.Images.FirstOrDefault().RemoteImageUrl != null ?
                    x.Images.FirstOrDefault().RemoteImageUrl :
                    "/images/cars/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
+            configuration.CreateMap<Car, CarsInListViewModel>()
+                .ForMember(x => x.UserCity, opt =>
+                    opt.MapFrom(x =>
+                    x.UserCars.FirstOrDefault().User.CityLiving));
         }
     }
 }
