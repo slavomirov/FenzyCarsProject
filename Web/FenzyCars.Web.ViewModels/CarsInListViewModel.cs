@@ -31,11 +31,10 @@
                    opt.MapFrom(x =>
                    x.Images.FirstOrDefault().RemoteImageUrl != null ?
                    x.Images.FirstOrDefault().RemoteImageUrl :
-                   "/images/cars/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension));
-            configuration.CreateMap<Car, CarsInListViewModel>()
-                .ForMember(x => x.UserCity, opt =>
-                    opt.MapFrom(x =>
-                    x.UserCars.FirstOrDefault().User.CityLiving));
+                   "/images/cars/" + x.Images.FirstOrDefault().Id + "." + x.Images.FirstOrDefault().Extension))
+                .ForMember(c => c.UserCity, optc =>
+                    optc.MapFrom(c =>
+                    c.UserCars.FirstOrDefault().User.CityLiving));
         }
     }
 }
