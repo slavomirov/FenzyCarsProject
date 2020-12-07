@@ -5,6 +5,10 @@
 @model CarsByIdViewModel
 
 <h1>@this.ViewData["Title"]</h1>
+@if (Model.LoggedUserId == Model.User.Id)
+{
+    <a class=" btn btn-success" asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+}
 <hr />
 
 <div class="row ">

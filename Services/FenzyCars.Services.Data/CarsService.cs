@@ -89,11 +89,11 @@
             await this.dbContext.SaveChangesAsync();
         }
 
-        public CarsByIdViewModel ById(int id)
+        public T ById<T>(int id)
         {
             var car = this.dbContext.Cars
                 .Where(x => x.Id == id)
-                .To<CarsByIdViewModel>()
+                .To<T>()
                 .FirstOrDefault();
 
             return car;
@@ -133,11 +133,33 @@
             Random random = new Random();
             int max = this.GetCount();
 
-            int min = random.Next(1, max);
+            int min = random.Next(1, max + 1);
 
             var car = this.dbContext.Cars.Where(x => x.Id == min).To<CarsInListViewModel>().FirstOrDefault();
 
             return car;
+        }
+
+        public async Task UpdateAsync(int id, CarEditViewModel input)
+        {
+            var car = this.dbContext.Cars.FirstOrDefault(x => x.Id == id);
+
+            car.BodyType = input.BodyType;
+            car.Color = input.Color;
+            car.Description = input.Description;
+            car.Doors = input.Doors;
+            car.EngineSize = input.EngineSize;
+            car.FuelType = input.FuelType;
+            car.Hp = input.Hp;
+            car.Make = input.Make;
+            car.Mileage = input.Mileage;
+            car.Model = input.Model;
+            car.Price = input.Price;
+            car.Seats = input.Seats;
+            car.Transmission = input.Transmission;
+            car.Year = input.Year;
+
+            await this.dbContext.SaveChangesAsync();
         }
 
         private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)

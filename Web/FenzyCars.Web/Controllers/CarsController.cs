@@ -11,6 +11,7 @@
     using FenzyCars.Web.ViewModels;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class CarsController : BaseController
@@ -18,12 +19,14 @@
         private readonly ApplicationDbContext dbContext;
         private readonly ICarsService carsService;
         private readonly IWebHostEnvironment environment;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public CarsController(ApplicationDbContext dbContext, ICarsService carsService, IWebHostEnvironment webHostEnvironment)
+        public CarsController(ApplicationDbContext dbContext, ICarsService carsService, IWebHostEnvironment webHostEnvironment, UserManager<ApplicationUser> userManager)
         {
             this.dbContext = dbContext;
             this.carsService = carsService;
             this.environment = webHostEnvironment;
+            this.userManager = userManager;
         }
 
         [Authorize]
@@ -64,7 +67,13 @@
 
         public IActionResult ById(int id)
         {
-            var car = this.carsService.ById(id);
+            var car = this.carsService.ById<CarsByIdViewModel>(id);
+            var loggedUserId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (car != null)
+            {
+                car.LoggedUserId = loggedUserId;
+            }
 
             return this.View(car);
         }
@@ -98,12 +107,35 @@
         {
             var cars = this.carsService.Search(viewModel);
 
-            return this.View("ResultFromSearch", cars);
+            return this.View(nameof(this.ResultFromSearch), cars);
         }
 
         public IActionResult ResultFromSearch(ICollection<CarsByIdViewModel> viewModel)
         {
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var input = this.carsService.ById<CarEditViewModel>(id);
+
+            input.Id = id;
+            return this.View(input);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(int id, CarEditViewModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                input.Id = id;
+                return this.View(input);
+            }
+
+            await this.carsService.UpdateAsync(id, input);
+            return this.RedirectToAction(nameof(this.ById), new { id });
         }
     }
 }

@@ -16,8 +16,10 @@
 
         int GetCount();
 
-        CarsByIdViewModel ById(int id);
+        T ById<T>(int id);
 
-        public ICollection<CarsByIdViewModel> Search(CarsSearchViewModel input);
+        ICollection<CarsByIdViewModel> Search(CarsSearchViewModel input);
+
+        Task UpdateAsync(int id, CarEditViewModel input);
     }
 }
