@@ -137,5 +137,23 @@
             await this.carsService.UpdateAsync(id, input);
             return this.RedirectToAction(nameof(this.ById), new { id });
         }
+
+        [Authorize]
+        public IActionResult MyCars(int id = 1)
+        {
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            const int itemsPerPage = 4;
+
+            var viewModel = this.carsService.GetCarsByUserId(userId, id);
+            viewModel.ItemsPerPage = itemsPerPage;
+            viewModel.PageNumber = id;
+
+            return this.View(viewModel);
+        }
     }
 }

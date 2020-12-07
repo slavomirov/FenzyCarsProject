@@ -162,6 +162,29 @@
             await this.dbContext.SaveChangesAsync();
         }
 
+        public CarsListViewModel GetCarsByUserId(string id, int page, int itemsPerPage = 4)
+        {
+            var allCars = this.dbContext.Cars
+                .Where(x => x.UserCars.FirstOrDefault().UserId == id)
+                .OrderByDescending(x => x.Id)
+                // .Skip((page - 1) * itemsPerPage)
+                // .Take(itemsPerPage)
+                .To<CarsInListViewModel>()
+                .ToList();
+
+            var carsCount = allCars.Count();
+
+            var cars = allCars
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage);
+
+            return new CarsListViewModel
+            {
+                Cars = cars,
+                CarsCount = carsCount,
+            };
+        }
+
         private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)
         {
             if (input.BodyType != null)

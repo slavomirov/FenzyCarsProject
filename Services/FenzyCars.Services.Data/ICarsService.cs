@@ -21,5 +21,7 @@
         ICollection<CarsByIdViewModel> Search(CarsSearchViewModel input);
 
         Task UpdateAsync(int id, CarEditViewModel input);
+
+        CarsListViewModel GetCarsByUserId(string id, int page, int itemsPerPage = 4);
     }
 }
