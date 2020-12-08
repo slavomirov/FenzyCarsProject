@@ -31,6 +31,12 @@
 
         public DbSet<UserCar> UserCars { get; set; }
 
+        public DbSet<Message> Messages { get; set; }
+
+        public DbSet<UserMessage> UserMessages { get; set; }
+
+        public DbSet<Chat> Chats { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -52,6 +58,12 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //    modelBuilder.Entity<Chat>()
+            //                       .HasOne(x => x.SecondUser)
+            //                       .WithOne(t => t.c)
+            //                       .HasForeignKey(m => m.HomeTeamId)
+            //                       .WillCascadeOnDelete(false);
+
             // Needed for Identity models configuration
             base.OnModelCreating(modelBuilder);
 

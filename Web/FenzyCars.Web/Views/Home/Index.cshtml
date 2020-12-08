@@ -33,7 +33,7 @@ else
     <li class="media">
         <img src="@Model.ImageUrl" width="250" class="mr-3 img-responsive">
         <div class="media-body">
-            <h5 class="mt-0"><a asp-action="ById" asp-route-id="@Model.Id">@string.Concat(Model.Make, " ", Model.Model)</a></h5>
+            <h5 class="mt-0"><a asp-controller="Cars" asp-action="ById" asp-route-id="@Model.Id">@string.Concat(Model.Make, " ", Model.Model)</a></h5>
             @Model.Description
             <hr />
             Price: @Model.Price

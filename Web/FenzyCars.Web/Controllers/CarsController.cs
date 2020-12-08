@@ -16,14 +16,12 @@
 
     public class CarsController : BaseController
     {
-        private readonly ApplicationDbContext dbContext;
         private readonly ICarsService carsService;
         private readonly IWebHostEnvironment environment;
         private readonly UserManager<ApplicationUser> userManager;
 
-        public CarsController(ApplicationDbContext dbContext, ICarsService carsService, IWebHostEnvironment webHostEnvironment, UserManager<ApplicationUser> userManager)
+        public CarsController(ICarsService carsService, IWebHostEnvironment webHostEnvironment, UserManager<ApplicationUser> userManager)
         {
-            this.dbContext = dbContext;
             this.carsService = carsService;
             this.environment = webHostEnvironment;
             this.userManager = userManager;

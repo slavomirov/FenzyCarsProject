@@ -17,6 +17,9 @@ namespace FenzyCars.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.UserCars = new HashSet<UserCar>();
+            this.Messages = new HashSet<Message>();
+            this.Chats = new HashSet<Chat>();
             this.CountOfPosts = 0;
         }
 
@@ -34,6 +37,10 @@ namespace FenzyCars.Data.Models
         public int CountOfPosts { get; set; }
 
         public ICollection<UserCar> UserCars { get; set; }
+
+        public ICollection<Message> Messages { get; set; }
+
+        public ICollection<Chat> Chats { get; set; }
 
         // Audit info
         public DateTime CreatedOn { get; set; }

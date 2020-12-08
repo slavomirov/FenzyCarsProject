@@ -16,7 +16,7 @@
 
     public class CarsService : ICarsService
     {
-        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif", "jpeg" };
         private readonly ApplicationDbContext dbContext;
         private readonly Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager;
 
@@ -167,8 +167,6 @@
             var allCars = this.dbContext.Cars
                 .Where(x => x.UserCars.FirstOrDefault().UserId == id)
                 .OrderByDescending(x => x.Id)
-                // .Skip((page - 1) * itemsPerPage)
-                // .Take(itemsPerPage)
                 .To<CarsInListViewModel>()
                 .ToList();
 

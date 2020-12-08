@@ -45,3 +45,10 @@
 @Model.User.FirstName @Model.User.LastName
 <br />
 @Model.User.PhoneNumber
+
+<hr />
+@if (this.User.Identity.IsAuthenticated)
+{
+    <a class=" btn btn-success" asp-controller="Users" asp-action="SendMessage" asp-route-id="@Model.User.Id">Send Message</a>
+
+}
