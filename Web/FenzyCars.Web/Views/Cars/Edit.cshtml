@@ -1,0 +1,91 @@
+﻿@model CarEditViewModel
+@using FenzyCars.Data.Models.Enums; 
+@{
+    this.ViewData["Title"] = "Edit car";
+}
+
+<h1>@this.ViewData["Title"]</h1>
+
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Make"></label>
+        <input asp-for="Make" class="form-control" />
+        <span asp-validation-for="Make"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Model"></label>
+        <input asp-for="Model" class="form-control" />
+        <span asp-validation-for="Model"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Color"></label>
+        <input asp-for="Color" class="form-control" />
+        <span asp-validation-for="Color"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mileage"></label>
+        <input asp-for="Mileage" class="form-control" type="number" min="0" max="@int.MaxValue" />
+        <span asp-validation-for="Mileage" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Hp"></label>
+        <input asp-for="Hp" class="form-control" type="number" min="0" max="1000" />
+        <span asp-validation-for="Hp" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Seats"></label>
+        <input asp-for="Seats" class="form-control" type="number" min="1" max="7" />
+        <span asp-validation-for="Seats" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Doors"></label>
+        <input asp-for="Doors" class="form-control" type="number" min="2" max="6" />
+        <span asp-validation-for="Doors" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Transmission">Transmisson</label>
+        @Html.DropDownListFor(x => x.Transmission,
+        new SelectList(Enum.GetValues(typeof(Transmission))),
+        "Select Transmission",
+        new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label asp-for="BodyType">Body Type</label>
+        @Html.DropDownListFor(x => x.BodyType,
+        new SelectList(Enum.GetValues(typeof(BodyType))),
+        "Select Body Type",
+        new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label asp-for="FuelType">Fuel Type</label>
+        @Html.DropDownListFor(x => x.FuelType,
+        new SelectList(Enum.GetValues(typeof(FuelType))),
+        "Select Fuel Type",
+        new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label asp-for="EngineSize">Engine Size</label>
+        <input asp-for="EngineSize" class="form-control" type="number" min="0" max="@int.MaxValue" />
+        <span asp-validation-for="EngineSize" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Year"></label>
+        <input asp-for="Year" class="form-control" type="number" min="1900" max="@DateTime.Now.Year" />
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <hr />
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Save changes" class="btn btn-success" />
+</form>
+

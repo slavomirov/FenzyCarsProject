@@ -1,0 +1,37 @@
+﻿@model UserSendMessageViewModel
+
+@{
+    this.ViewData["Title"] = $"New message";
+}
+
+<section class="py-5">
+    <div class="container">
+        <h1 style="margin: 2%; text-align: center;">Send message to @Model.Reciever.FirstName @Model.Reciever.LastName</h1>
+        <div style="padding: 5%;">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Message"></label>
+                    <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Message" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Images"></label>
+                    <input asp-for="Images" class="form-control" />
+                    <span asp-validation-for="Images" class="text-danger"></span>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="recieverId"></label>
+                    <input asp-for="recieverId" class="form-control" />
+                    <span asp-validation-for="recieverId" class="text-danger"></span>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="senderId"></label>
+                    <input asp-for="senderId" class="form-control" />
+                    <span asp-validation-for="senderId" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-info text-uppercase">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
