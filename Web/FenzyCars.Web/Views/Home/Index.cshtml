@@ -1,4 +1,6 @@
-﻿@using FenzyCars.Common
+﻿@using FenzyCars.Web.ViewModels.Cars;
+
+@using FenzyCars.Common
 @{
     this.ViewData["Title"] = "Home Page";
 }
@@ -37,7 +39,7 @@ else
             @Model.Description
             <hr />
             Price: @Model.Price
-            City: @Model.UserCity   
+            City: @Model.UserCity
         </div>
     </li>
     <hr />

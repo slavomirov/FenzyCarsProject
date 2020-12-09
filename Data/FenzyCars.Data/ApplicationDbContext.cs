@@ -31,11 +31,13 @@
 
         public DbSet<UserCar> UserCars { get; set; }
 
-        public DbSet<Message> Messages { get; set; }
+        public DbSet<RecievedMessage> RecievedMessages { get; set; }
 
-        public DbSet<UserMessage> UserMessages { get; set; }
+        public DbSet<SendedMessage> SendedMessages { get; set; }
 
-        public DbSet<Chat> Chats { get; set; }
+        public DbSet<UserSendedMessages> UserSendedMessages { get; set; }
+
+        public DbSet<UserRecievedMessages> UserRecievedMessages { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 

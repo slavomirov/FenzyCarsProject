@@ -1,14 +1,17 @@
 ﻿namespace FenzyCars.Services.Data
 {
     using System;
+    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
 
     using FenzyCars.Data;
     using FenzyCars.Data.Models;
+    using FenzyCars.Services.Mapping;
     using FenzyCars.Web.ViewModels;
+    using FenzyCars.Web.ViewModels.Messages;
     using Microsoft.AspNetCore.Identity;
-
+    using Microsoft.EntityFrameworkCore;
 
     public class UsersService : IUsersService
     {
@@ -32,12 +35,20 @@
             input.Reciever = this.GetUserById(input.recieverId);
             input.Sender = this.GetUserById(input.senderId);
 
-            var chat = this.CreateChat(input);
-
-            var message = new Message
+            var sendedMessage = new SendedMessage
             {
                 Text = input.Message,
                 Time = DateTime.UtcNow,
+                Reciever = input.Reciever,
+                SenderId = input.senderId,
+            };
+
+            var recievedMessage = new RecievedMessage
+            {
+                Text = input.Message,
+                Time = DateTime.UtcNow,
+                Sender = input.Sender,
+                RecieverId = input.recieverId,
             };
 
             if (input.Images.Count > 0)
@@ -59,7 +70,8 @@
                         Extension = extension,
                     };
 
-                    message.Images.Add(dbImage);
+                    sendedMessage.Images.Add(dbImage);
+                    recievedMessage.Images.Add(dbImage);
 
                     var physicalPath = $"{imagePath}/messages/{dbImage.Id}.{extension}";
 
@@ -70,34 +82,57 @@
                 }
             }
 
-            var userMessage = new UserMessage
+            var userRecievedMessage = new UserRecievedMessages
             {
-                Message = message,
-                Reciever = input.Reciever,
+                Message = recievedMessage,
                 Sender = input.Sender,
             };
 
-            chat.AddMessage(input.senderId, message);
+            var userSendedMessage = new UserSendedMessages
+            {
+                Message = sendedMessage,
+                Reciever = input.Reciever,
+            };
 
-            this.dbContext.Messages.Add(message);
-            this.dbContext.UserMessages.Add(userMessage);
+            this.dbContext.RecievedMessages.Add(recievedMessage);
+            this.dbContext.UserRecievedMessages.Add(userRecievedMessage);
+
+            this.dbContext.SendedMessages.Add(sendedMessage);
+            this.dbContext.UserSendedMessages.Add(userSendedMessage);
+
             this.dbContext.SaveChanges();
         }
 
-        public Chat CreateChat(UserSendMessageViewModel input)
+        public IEnumerable<RecievedMessagesInListViewModel> GetAllRecieved(int page, string userId, int itemsPerPage = 4)
         {
-            var chat = new Chat();
+            return this.dbContext.RecievedMessages.AsNoTracking()
+                .Where(x => x.RecieverId == userId)
+                .OrderByDescending(x => x.Id)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<RecievedMessagesInListViewModel>()
+                .ToList();
+        }
 
-            if (this.dbContext.Chats
-                .Any(x => (x.FirstUserId == input.recieverId && x.SecondUserId == input.senderId) ||
-                          (x.FirstUserId == input.senderId && x.SecondUserId == input.recieverId)))
-            {
-                chat = this.dbContext.Chats
-                    .Where(x => (x.FirstUserId == input.recieverId && x.SecondUserId == input.senderId) ||
-                          (x.FirstUserId == input.senderId && x.SecondUserId == input.recieverId)).FirstOrDefault();
-            }
+        public int GetRecievedCount(string userId)
+        {
+           return this.dbContext.RecievedMessages.Where(x => x.RecieverId == userId).Count();
+        }
 
-            return chat;
+        public IEnumerable<SendedMessagesInListViewModel> GetAllSended(int page, string userId, int itemsPerPage = 4)
+        {
+            return this.dbContext.SendedMessages.AsNoTracking()
+                .Where(x => x.SenderId == userId)
+                .OrderByDescending(x => x.Id)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .To<SendedMessagesInListViewModel>()
+                .ToList();
+        }
+
+        public int GetSendedCount(string userId)
+        {
+            return this.dbContext.SendedMessages.Where(x => x.SenderId == userId).Count();
         }
     }
 }

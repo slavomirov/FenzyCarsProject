@@ -5,6 +5,7 @@
 
     using FenzyCars.Data.Models;
     using FenzyCars.Web.ViewModels;
+    using FenzyCars.Web.ViewModels.Cars;
 
     public interface ICarsService
     {

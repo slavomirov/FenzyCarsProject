@@ -11,6 +11,7 @@
     using FenzyCars.Data.Models;
     using FenzyCars.Services.Mapping;
     using FenzyCars.Web.ViewModels;
+    using FenzyCars.Web.ViewModels.Cars;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
 

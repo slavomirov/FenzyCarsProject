@@ -9,6 +9,7 @@
     using FenzyCars.Data.Models;
     using FenzyCars.Services.Data;
     using FenzyCars.Web.ViewModels;
+    using FenzyCars.Web.ViewModels.Cars;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;

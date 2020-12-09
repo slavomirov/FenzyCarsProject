@@ -1,10 +1,12 @@
 ﻿namespace FenzyCars.Web.Controllers
 {
+    using System.Collections.Generic;
     using System.Security.Claims;
 
     using FenzyCars.Data.Models;
     using FenzyCars.Services.Data;
     using FenzyCars.Web.ViewModels;
+    using FenzyCars.Web.ViewModels.Messages;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
@@ -50,12 +52,51 @@
 
             this.usersService.SendMessage(input, $"{this.environment.WebRootPath}/images");
 
-            return this.RedirectToAction(nameof(this.Chat), input);
+            return this.Redirect("/");
         }
 
-        public IActionResult Chat(UserChatViewModel input)
+        [Authorize]
+        public IActionResult AllRecievedMessages(int id = 1)
         {
-            return this.View();
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            const int itemsPerPage = 4;
+            var viewModel = new RecievedMessagesListViewModel
+            {
+                ItemsPerPage = itemsPerPage,
+                PageNumber = id,
+                MessagesCount = this.usersService.GetRecievedCount(userId),
+                Messages = this.usersService.GetAllRecieved(id, userId),
+            };
+
+            return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IActionResult AllSendedMessages(int id = 1)
+        {
+            if (id <= 0)
+            {
+                return this.NotFound();
+            }
+
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            const int itemsPerPage = 4;
+            var viewModel = new SendedMessagesListViewModel
+            {
+                ItemsPerPage = itemsPerPage,
+                PageNumber = id,
+                MessagesCount = this.usersService.GetSendedCount(userId),
+                Messages = this.usersService.GetAllSended(id, userId),
+            };
+
+            return this.View(viewModel);
         }
     }
 }

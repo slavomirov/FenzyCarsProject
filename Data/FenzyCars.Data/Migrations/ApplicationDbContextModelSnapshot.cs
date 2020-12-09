@@ -228,28 +228,6 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("Cars");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.Chat", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FirstUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("SecondUserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FirstUserId");
-
-                    b.HasIndex("SecondUserId");
-
-                    b.ToTable("Chats");
-                });
-
             modelBuilder.Entity("FenzyCars.Data.Models.Image", b =>
                 {
                     b.Property<string>("Id")
@@ -267,14 +245,17 @@ namespace FenzyCars.Data.Migrations
                     b.Property<string>("Extension")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MessageId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("RecievedMessageId")
+                        .HasColumnType("int");
+
                     b.Property<string>("RemoteImageUrl")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SendedMessageId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -282,26 +263,25 @@ namespace FenzyCars.Data.Migrations
 
                     b.HasIndex("CarId");
 
-                    b.HasIndex("MessageId");
+                    b.HasIndex("RecievedMessageId");
+
+                    b.HasIndex("SendedMessageId");
 
                     b.ToTable("Image");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.Message", b =>
+            modelBuilder.Entity("FenzyCars.Data.Models.RecievedMessage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
+                    b.Property<string>("RecieverId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenderId")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int?>("ChatId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ChatId1")
-                        .HasColumnType("int");
 
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");
@@ -311,13 +291,35 @@ namespace FenzyCars.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("SenderId");
 
-                    b.HasIndex("ChatId");
+                    b.ToTable("RecievedMessages");
+                });
 
-                    b.HasIndex("ChatId1");
+            modelBuilder.Entity("FenzyCars.Data.Models.SendedMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.ToTable("Messages");
+                    b.Property<string>("RecieverId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("SenderId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecieverId");
+
+                    b.ToTable("SendedMessages");
                 });
 
             modelBuilder.Entity("FenzyCars.Data.Models.Setting", b =>
@@ -374,7 +376,29 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("UserCars");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.UserMessage", b =>
+            modelBuilder.Entity("FenzyCars.Data.Models.UserRecievedMessages", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("MessageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SenderId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("UserRecievedMessages");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.UserSendedMessages", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -387,18 +411,13 @@ namespace FenzyCars.Data.Migrations
                     b.Property<string>("RecieverId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("SenderId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("MessageId");
 
                     b.HasIndex("RecieverId");
 
-                    b.HasIndex("SenderId");
-
-                    b.ToTable("UserMessages");
+                    b.ToTable("UserSendedMessages");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -505,17 +524,6 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.Chat", b =>
-                {
-                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "FirstUser")
-                        .WithMany()
-                        .HasForeignKey("FirstUserId");
-
-                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "SecondUser")
-                        .WithMany()
-                        .HasForeignKey("SecondUserId");
-                });
-
             modelBuilder.Entity("FenzyCars.Data.Models.Image", b =>
                 {
                     b.HasOne("FenzyCars.Data.Models.ApplicationUser", "AddedByUser")
@@ -526,24 +534,27 @@ namespace FenzyCars.Data.Migrations
                         .WithMany("Images")
                         .HasForeignKey("CarId");
 
-                    b.HasOne("FenzyCars.Data.Models.Message", null)
+                    b.HasOne("FenzyCars.Data.Models.RecievedMessage", null)
                         .WithMany("Images")
-                        .HasForeignKey("MessageId");
+                        .HasForeignKey("RecievedMessageId");
+
+                    b.HasOne("FenzyCars.Data.Models.SendedMessage", null)
+                        .WithMany("Images")
+                        .HasForeignKey("SendedMessageId");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.Message", b =>
+            modelBuilder.Entity("FenzyCars.Data.Models.RecievedMessage", b =>
                 {
-                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", null)
-                        .WithMany("Messages")
-                        .HasForeignKey("ApplicationUserId");
+                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "Sender")
+                        .WithMany("RecievedMessages")
+                        .HasForeignKey("SenderId");
+                });
 
-                    b.HasOne("FenzyCars.Data.Models.Chat", null)
-                        .WithMany("FirstUserMessages")
-                        .HasForeignKey("ChatId");
-
-                    b.HasOne("FenzyCars.Data.Models.Chat", null)
-                        .WithMany("SecondUserMessages")
-                        .HasForeignKey("ChatId1");
+            modelBuilder.Entity("FenzyCars.Data.Models.SendedMessage", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "Reciever")
+                        .WithMany("SendedMessages")
+                        .HasForeignKey("RecieverId");
                 });
 
             modelBuilder.Entity("FenzyCars.Data.Models.UserCar", b =>
@@ -559,9 +570,22 @@ namespace FenzyCars.Data.Migrations
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.UserMessage", b =>
+            modelBuilder.Entity("FenzyCars.Data.Models.UserRecievedMessages", b =>
                 {
-                    b.HasOne("FenzyCars.Data.Models.Message", "Message")
+                    b.HasOne("FenzyCars.Data.Models.RecievedMessage", "Message")
+                        .WithMany()
+                        .HasForeignKey("MessageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "Sender")
+                        .WithMany()
+                        .HasForeignKey("SenderId");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.UserSendedMessages", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.SendedMessage", "Message")
                         .WithMany()
                         .HasForeignKey("MessageId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -570,10 +594,6 @@ namespace FenzyCars.Data.Migrations
                     b.HasOne("FenzyCars.Data.Models.ApplicationUser", "Reciever")
                         .WithMany()
                         .HasForeignKey("RecieverId");
-
-                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "Sender")
-                        .WithMany()
-                        .HasForeignKey("SenderId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

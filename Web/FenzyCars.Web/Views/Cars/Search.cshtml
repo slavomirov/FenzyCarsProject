@@ -1,4 +1,6 @@
-﻿@{
+﻿@using FenzyCars.Web.ViewModels.Cars;
+
+@{
     this.ViewData["Title"] = "Search";
 }
 
@@ -15,19 +17,19 @@
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label asp-for="Make"></label>
-                    <input asp-for="Make" class="form-control"/>
+                    <input asp-for="Make" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Model"></label>
-                    <input asp-for="Model" class="form-control"/>
+                    <input asp-for="Model" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Color"></label>
-                    <input asp-for="Color" class="form-control"/>
+                    <input asp-for="Color" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MinMileage"></label>
-                    <input asp-for="MinMileage" class="form-control" type="number" min="0"/>
+                    <input asp-for="MinMileage" class="form-control" type="number" min="0" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxMileage"></label>
@@ -35,11 +37,11 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="Seats"></label>
-                    <input asp-for="Seats" class="form-control" type="number" min="0" max="7"/>
+                    <input asp-for="Seats" class="form-control" type="number" min="0" max="7" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Doors"></label>
-                    <input asp-for="Doors" class="form-control" type="number" min="0" max="6"/>
+                    <input asp-for="Doors" class="form-control" type="number" min="0" max="6" />
                 </div>
                 <div class="form-group">
                     <label asp-for="Transmission">Transmisson</label>
@@ -64,15 +66,15 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="MinEngineSize">Minimum engine size</label>
-                    <input asp-for="MinEngineSize" class="form-control" type="number" min="0"/>
+                    <input asp-for="MinEngineSize" class="form-control" type="number" min="0" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxEngineSize">Maximum engine size</label>
-                    <input asp-for="MaxEngineSize" class="form-control"/>
+                    <input asp-for="MaxEngineSize" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MinYear">Minimum year</label>
-                    <input asp-for="MinYear" class="form-control" type="number" min="1900" max="@DateTime.Now.Year"/>
+                    <input asp-for="MinYear" class="form-control" type="number" min="1900" max="@DateTime.Now.Year" />
                 </div>
                 <div class="form-group">
                     <label asp-for="MaxYear">Maximum year</label>

@@ -37,6 +37,12 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="MyCars">My cars</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="AllRecievedMessages">Recieved messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="AllSendedMessages">Sended messages</a>
+                            </li>
                         }
                         @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                         {
