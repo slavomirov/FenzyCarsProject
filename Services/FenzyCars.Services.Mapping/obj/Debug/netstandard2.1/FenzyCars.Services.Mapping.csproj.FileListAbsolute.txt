@@ -6,3 +6,4 @@ C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Debug\netstandard2.1\FenzyCars.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Debug\netstandard2.1\FenzyCars.Services.Mapping.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Debug\netstandard2.1\FenzyCars.Services.Mapping.pdb
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Debug\netstandard2.1\FenzyCars.Services.Mapping.csprojAssemblyReference.cache

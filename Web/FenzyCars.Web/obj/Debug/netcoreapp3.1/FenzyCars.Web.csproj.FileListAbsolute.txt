@@ -497,3 +497,4 @@ C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Users\SendMessage.cshtml.g.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Users\AllRecievedMessages.cshtml.g.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Users\AllSendedMessages.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs

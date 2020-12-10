@@ -4,6 +4,7 @@
 
     using FenzyCars.Services.Data;
     using FenzyCars.Web.ViewModels;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
@@ -24,6 +25,12 @@
         }
 
         public IActionResult Privacy()
+        {
+            return this.View();
+        }
+
+        [Authorize]
+        public IActionResult Chat()
         {
             return this.View();
         }
