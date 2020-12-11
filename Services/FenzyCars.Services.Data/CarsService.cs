@@ -184,6 +184,14 @@
             };
         }
 
+        public async Task DeleteAsync(int id)
+        {
+            var car = this.dbContext.Cars.Where(x => x.Id == id).FirstOrDefault();
+            car.DeletedOn = DateTime.UtcNow;
+            car.IsDeleted = true;
+            await this.dbContext.SaveChangesAsync();
+        }
+
         private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)
         {
             if (input.BodyType != null)

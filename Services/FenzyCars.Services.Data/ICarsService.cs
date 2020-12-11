@@ -24,5 +24,7 @@
         Task UpdateAsync(int id, CarEditViewModel input);
 
         CarsListViewModel GetCarsByUserId(string id, int page, int itemsPerPage = 4);
+
+        Task DeleteAsync(int id);
     }
 }

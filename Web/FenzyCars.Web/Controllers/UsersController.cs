@@ -38,6 +38,12 @@
                 senderId = senderId,
             };
 
+            // ERROR
+            if (view.recieverId == view.senderId)
+            {
+                return this.BadRequest("You cant send message on yourself!");
+            }
+
             return this.View(view);
         }
 
@@ -50,6 +56,12 @@
                 return this.View(input);
             }
 
+            // ERROR
+            if (input.recieverId == input.senderId)
+            {
+                return this.BadRequest("You cant send message on yourself!");
+            }
+
             this.usersService.SendMessage(input, $"{this.environment.WebRootPath}/images");
 
             return this.Redirect("/");
@@ -58,6 +70,7 @@
         [Authorize]
         public IActionResult AllRecievedMessages(int id = 1)
         {
+            // ERROR
             if (id <= 0)
             {
                 return this.NotFound();
@@ -80,6 +93,7 @@
         [Authorize]
         public IActionResult AllSendedMessages(int id = 1)
         {
+            // ERROR
             if (id <= 0)
             {
                 return this.NotFound();

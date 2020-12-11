@@ -4,6 +4,14 @@
 @foreach (var message in Model.Messages)
 {
     <h3>@message.Text</h3>
+    <div class="row">
+        @foreach (var image in message.Images)
+        {
+            <div class="w-auto p-0 media col-sm-5">
+                <img src="@image.RemoteImageUrl" class="w-100 rounded float-right img-responsive">
+            </div>
+        }
+    </div>
     <h5>Sender: @message.Sender.FirstName @message.Sender.LastName</h5>
     <h5>@message.Time</h5>
     <a class=" btn btn-success" asp-action="SendMessage" asp-route-id="@message.Sender.Id">Contact</a>

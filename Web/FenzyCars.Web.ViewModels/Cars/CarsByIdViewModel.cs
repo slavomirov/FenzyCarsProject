@@ -58,11 +58,6 @@
                 .ForMember(x => x.User, opt =>
                     opt.MapFrom(x =>
                     x.UserCars.FirstOrDefault().User));
-
-            // configuration.CreateMap<Car, CarsByIdViewModel>()
-            //    .ForMember(x => x.Id, opt =>
-            //        opt.MapFrom(x =>
-            //        x.Id));
         }
     }
 }

@@ -154,5 +154,12 @@
 
             return this.View(viewModel);
         }
+
+        [Authorize]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.carsService.DeleteAsync(id);
+            return this.RedirectToAction(nameof(this.All));
+        }
     }
 }
