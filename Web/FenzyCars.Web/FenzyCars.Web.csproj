@@ -9,12 +9,40 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.css" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Remove="Views\Home\Index.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="bootstrap" Version="4.5.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
@@ -26,7 +54,7 @@
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.113" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.9" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>

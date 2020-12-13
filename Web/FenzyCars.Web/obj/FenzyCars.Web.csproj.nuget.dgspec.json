@@ -779,11 +779,11 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
@@ -816,6 +816,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.2.0-beta.205, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[4.5.3, )"
             }
           },
           "imports": [

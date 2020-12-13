@@ -10,13 +10,13 @@
 @if (Model.LoggedUserId == Model.User.Id)
 {
     <div style="float:left">
-        <button class="btn btn-success" asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.Id">Edit</button>
+        <button class="btn btn-info btn-pill" asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.Id">Edit</button>
     </div>
 
     <div>
         <form method="post" asp-action="Delete" id="deleteForm" asp-route-id="@Model.Id">
         </form>
-        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</button>
+        <button class="btn btn-danger btn-pill" data-toggle="modal" data-target="#deleteModal">Delete</button>
     </div>
 }
 <hr />

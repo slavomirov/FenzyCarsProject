@@ -7,10 +7,13 @@
     <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/lazy.css">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -21,10 +24,10 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" role="button" aria-expanded="false">Cars<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">Cars<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Cars" asp-action="All">All cars</a>
@@ -46,7 +49,7 @@
                         @if (this.User.Identity.IsAuthenticated)
                         {
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" role="button" aria-expanded="false">Messages<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">Messages<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="AllRecievedMessages">Recieved messages</a>
@@ -63,7 +66,7 @@
                         @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="Administration" asp-controller="Cars" asp-action="Index">Cars administration</a>
+                                <a class="navbar-brand" asp-area="Administration" asp-controller="Cars" asp-action="Index">Cars administration</a>
                             </li>
                         }
                     </ul>
@@ -89,8 +92,10 @@
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
     <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js" asp-append-version="true"></script>
     <script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/lib/popper/popper.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
     <script src="~/js/site.min.js" asp-append-version="true"></script>
+    <script src="~/js/lazy.js" asp-append-version="true"></script>
     @await this.RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
