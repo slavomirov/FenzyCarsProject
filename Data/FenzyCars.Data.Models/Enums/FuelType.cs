@@ -8,10 +8,10 @@
         Diesel,
         Electric,
         Gas,
-        [Description("Hybrid/Electric")]
+        [Display(Name = "Hybrid/Electric")]
         HybridElectric,
         Petrol,
-        [Description("Petrol/Gas")]
+        [Display(Name = "Petrol/Gas")]
         PetrolAndGas,
     }
 }

@@ -10,7 +10,7 @@
 @if (Model.LoggedUserId == Model.User.Id)
 {
     <div style="float:left">
-        <button class="btn btn-info btn-pill" asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.Id">Edit</button>
+        <a class="btn btn-info btn-pill" asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
     </div>
 
     <div>

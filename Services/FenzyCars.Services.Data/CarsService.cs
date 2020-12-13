@@ -9,6 +9,7 @@
 
     using FenzyCars.Data;
     using FenzyCars.Data.Models;
+    using FenzyCars.Data.Models.Enums;
     using FenzyCars.Services.Mapping;
     using FenzyCars.Web.ViewModels;
     using FenzyCars.Web.ViewModels.Cars;
@@ -194,7 +195,7 @@
 
         private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)
         {
-            if (input.BodyType != null)
+            if (input.BodyType != "All")
             {
                 cars = cars.Where(x => x.BodyType == input.BodyType).ToList();
             }
@@ -214,7 +215,7 @@
                 cars = cars.Where(x => x.Doors == input.Doors).ToList();
             }
 
-            if (input.FuelType != null)
+            if (input.FuelType != "All")
             {
                 cars = cars.Where(x => x.FuelType == input.FuelType).ToList();
             }
@@ -224,7 +225,7 @@
                 cars = cars.Where(x => x.Seats == input.Seats).ToList();
             }
 
-            if (input.Transmission != null)
+            if (input.Transmission != "All")
             {
                 cars = cars.Where(x => x.Transmission == input.Transmission).ToList();
             }
@@ -287,6 +288,56 @@
             if (input.MaxPrice != null)
             {
                 cars = cars.Where(x => x.Mileage <= input.MaxPrice).ToList();
+            }
+
+            if (input.SortBy != "Default")
+            {
+                if (input.Way == "Descending")
+                {
+                    if (input.SortBy == "Hp")
+                    {
+                        cars = cars.OrderByDescending(x => x.Hp).ToList();
+                    }
+                    else if (input.SortBy == "Mileage")
+                    {
+                        cars = cars.OrderByDescending(x => x.Mileage).ToList();
+                    }
+                    else if (input.SortBy == "EngineSize")
+                    {
+                        cars = cars.OrderByDescending(x => x.EngineSize).ToList();
+                    }
+                    else if (input.SortBy == "Year")
+                    {
+                        cars = cars.OrderByDescending(x => x.Year).ToList();
+                    }
+                    else if (input.SortBy == "Price")
+                    {
+                        cars = cars.OrderByDescending(x => x.Price).ToList();
+                    }
+                }
+                else
+                {
+                    if (input.SortBy == "Hp")
+                    {
+                        cars = cars.OrderBy(x => x.Hp).ToList();
+                    }
+                    else if (input.SortBy == "Mileage")
+                    {
+                        cars = cars.OrderBy(x => x.Mileage).ToList();
+                    }
+                    else if (input.SortBy.ToString() == "EngineSize")
+                    {
+                        cars = cars.OrderBy(x => x.EngineSize).ToList();
+                    }
+                    else if (input.SortBy == "Year")
+                    {
+                        cars = cars.OrderBy(x => x.Year).ToList();
+                    }
+                    else if (input.SortBy == "Price")
+                    {
+                        cars = cars.OrderBy(x => x.Price).ToList();
+                    }
+                }
             }
 
             return cars;

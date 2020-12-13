@@ -1,6 +1,6 @@
 ﻿namespace FenzyCars.Web.ViewModels.Cars
 {
-    using System;
+    using FenzyCars.Data.Models.Enums;
 
     public class CarsSearchViewModel
     {
@@ -41,5 +41,9 @@
         public int? MaxMileage { get; set; }
 
         public string City { get; set; }
+
+        public string SortBy { get; set; }
+
+        public string Way { get; set; }
     }
 }
