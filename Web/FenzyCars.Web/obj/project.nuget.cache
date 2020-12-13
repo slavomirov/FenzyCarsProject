@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D7e0dRGc7xG/mTbysMqXfYQkUPocvN9dOcsUIYtNHuuyqnkIQuNHz59GEjWetXYY+MDZFzn9PVYL3UR6tm61jA==",
+  "dgSpecHash": "5MOtWAK69iiYFIbXMhyguPhElIiDzu5cMm7Qv+x0T1qyqSnaCqg3YSz5E0JW0iekWo1OW+EqWYr/3/5z7b5fTw==",
   "success": true,
   "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\bootstrap\\4.5.3\\bootstrap.4.5.3.nupkg.sha512",
+    "C:\\Users\\spart\\.nuget\\packages\\bootstrap.sass\\4.5.3\\bootstrap.sass.4.5.3.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.10\\microsoft.aspnetcore.cryptography.internal.3.1.10.nupkg.sha512",

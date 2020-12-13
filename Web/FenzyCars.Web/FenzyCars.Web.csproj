@@ -11,6 +11,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Remove="C:\Users\spart\.nuget\packages\bootstrap.sass\4.5.3\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
     <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
     <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
     <Content Remove="C:\Users\spart\.nuget\packages\bootstrap\4.5.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
@@ -42,6 +50,7 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.5.3" />
+    <PackageReference Include="bootstrap.sass" Version="4.5.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
