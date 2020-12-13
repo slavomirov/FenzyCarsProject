@@ -1,0 +1,12 @@
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Release\netstandard2.1\FenzyCars.Data.Models.deps.json
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Release\netstandard2.1\FenzyCars.Data.Models.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Release\netstandard2.1\FenzyCars.Data.Models.pdb
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Release\netstandard2.1\FenzyCars.Data.Common.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Release\netstandard2.1\FenzyCars.Data.Common.pdb
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.AssemblyInfo.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.csproj.CopyComplete
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Release\netstandard2.1\FenzyCars.Data.Models.pdb

@@ -1,0 +1,9 @@
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\bin\Release\netstandard2.1\FenzyCars.Services.Mapping.deps.json
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\bin\Release\netstandard2.1\FenzyCars.Services.Mapping.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\bin\Release\netstandard2.1\FenzyCars.Services.Mapping.pdb
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Release\netstandard2.1\FenzyCars.Services.Mapping.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Release\netstandard2.1\FenzyCars.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Release\netstandard2.1\FenzyCars.Services.Mapping.AssemblyInfo.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Release\netstandard2.1\FenzyCars.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Release\netstandard2.1\FenzyCars.Services.Mapping.dll
+C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Mapping\obj\Release\netstandard2.1\FenzyCars.Services.Mapping.pdb
