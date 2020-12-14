@@ -424,7 +424,6 @@ C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.AssemblyInfoInputs.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.AssemblyInfo.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.csproj.CoreCompileInputs.cache
-C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.RazorAssemblyInfo.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.RazorAssemblyInfo.cs
@@ -504,3 +503,6 @@ C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ResetPassword.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\Add.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\All.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\ById.cshtml.g.cs

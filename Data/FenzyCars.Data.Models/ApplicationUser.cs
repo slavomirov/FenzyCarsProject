@@ -1,5 +1,4 @@
-﻿// ReSharper disable VirtualMemberCallInConstructor
-namespace FenzyCars.Data.Models
+﻿namespace FenzyCars.Data.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,6 +19,7 @@ namespace FenzyCars.Data.Models
             this.UserCars = new HashSet<UserCar>();
             this.RecievedMessages = new HashSet<RecievedMessage>();
             this.SendedMessages = new HashSet<SendedMessage>();
+            this.UserDealerships = new HashSet<UserDealership>();
             this.CountOfPosts = 0;
         }
 
@@ -41,6 +41,8 @@ namespace FenzyCars.Data.Models
         public ICollection<RecievedMessage> RecievedMessages { get; set; }
 
         public ICollection<SendedMessage> SendedMessages { get; set; }
+
+        public ICollection<UserDealership> UserDealerships { get; set; }
 
         // Audit info
         public DateTime CreatedOn { get; set; }

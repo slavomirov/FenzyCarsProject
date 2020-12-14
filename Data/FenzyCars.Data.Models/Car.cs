@@ -61,6 +61,8 @@
         [Required]
         public int Price { get; set; }
 
+        public Dealership Dealership { get; set; }
+
         [Required]
         public ICollection<Image> Images { get; set; }
 

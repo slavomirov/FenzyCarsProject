@@ -173,6 +173,9 @@ namespace FenzyCars.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DealershipId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
@@ -223,9 +226,108 @@ namespace FenzyCars.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DealershipId");
+
                     b.HasIndex("IsDeleted");
 
                     b.ToTable("Cars");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.Dealership", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("Added")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Dealerships");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.DealershipCar", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DealershipId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("DealershipId");
+
+                    b.ToTable("DealershipCars");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.DealershipLogo", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DealershipId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Extension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("RemoteImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DealershipId")
+                        .IsUnique()
+                        .HasFilter("[DealershipId] IS NOT NULL");
+
+                    b.ToTable("Logos");
                 });
 
             modelBuilder.Entity("FenzyCars.Data.Models.Image", b =>
@@ -522,6 +624,33 @@ namespace FenzyCars.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.Car", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
+                        .WithMany("Cars")
+                        .HasForeignKey("DealershipId");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.DealershipCar", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.Car", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
+                        .WithMany()
+                        .HasForeignKey("DealershipId");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.DealershipLogo", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
+                        .WithOne("Logo")
+                        .HasForeignKey("FenzyCars.Data.Models.DealershipLogo", "DealershipId");
                 });
 
             modelBuilder.Entity("FenzyCars.Data.Models.Image", b =>

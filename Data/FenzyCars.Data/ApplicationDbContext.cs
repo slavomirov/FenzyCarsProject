@@ -39,6 +39,14 @@
 
         public DbSet<UserRecievedMessages> UserRecievedMessages { get; set; }
 
+        public DbSet<UserDealership> UserDealerships { get; set; }
+
+        public DbSet<DealershipCar> DealershipCars { get; set; }
+
+        public DbSet<Dealership> Dealerships { get; set; }
+
+        public DbSet<DealershipLogo> Logos { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
