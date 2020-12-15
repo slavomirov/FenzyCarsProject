@@ -6,3 +6,4 @@ C:\Users\spart\Desktop\FenzyCarsProject\FenzyCars.Common\obj\Debug\netstandard2.
 C:\Users\spart\Desktop\FenzyCarsProject\FenzyCars.Common\obj\Debug\netstandard2.1\FenzyCars.Common.csproj.CoreCompileInputs.cache
 C:\Users\spart\Desktop\FenzyCarsProject\FenzyCars.Common\obj\Debug\netstandard2.1\FenzyCars.Common.dll
 C:\Users\spart\Desktop\FenzyCarsProject\FenzyCars.Common\obj\Debug\netstandard2.1\FenzyCars.Common.pdb
+C:\Users\spart\Desktop\FenzyCarsProject\FenzyCars.Common\obj\Debug\netstandard2.1\FenzyCars.Common.csprojAssemblyReference.cache

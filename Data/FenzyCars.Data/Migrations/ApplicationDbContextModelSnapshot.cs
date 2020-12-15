@@ -478,6 +478,28 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("UserCars");
                 });
 
+            modelBuilder.Entity("FenzyCars.Data.Models.UserDealership", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DealershipId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DealershipId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserDealerships");
+                });
+
             modelBuilder.Entity("FenzyCars.Data.Models.UserRecievedMessages", b =>
                 {
                     b.Property<int>("Id")
@@ -696,6 +718,17 @@ namespace FenzyCars.Data.Migrations
 
                     b.HasOne("FenzyCars.Data.Models.ApplicationUser", "User")
                         .WithMany("UserCars")
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.UserDealership", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
+                        .WithMany("UserDealerships")
+                        .HasForeignKey("DealershipId");
+
+                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "User")
+                        .WithMany("UserDealerships")
                         .HasForeignKey("UserId");
                 });
 
