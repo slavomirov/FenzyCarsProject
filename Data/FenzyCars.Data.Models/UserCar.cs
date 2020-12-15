@@ -2,12 +2,10 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class UserCar
-    {
-        [Required]
-        [Key]
-        public int Id { get; set; }
+    using FenzyCars.Data.Common.Models;
 
+    public class UserCar : BaseModel<int>
+    {
         public ApplicationUser User { get; set; }
 
         public string UserId { get; set; }

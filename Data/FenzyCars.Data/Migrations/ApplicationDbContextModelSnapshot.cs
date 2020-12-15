@@ -173,9 +173,6 @@ namespace FenzyCars.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DealershipId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
@@ -225,8 +222,6 @@ namespace FenzyCars.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DealershipId");
 
                     b.HasIndex("IsDeleted");
 
@@ -466,6 +461,12 @@ namespace FenzyCars.Data.Migrations
                     b.Property<int>("CarId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -648,23 +649,16 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("FenzyCars.Data.Models.Car", b =>
-                {
-                    b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
-                        .WithMany("Cars")
-                        .HasForeignKey("DealershipId");
-                });
-
             modelBuilder.Entity("FenzyCars.Data.Models.DealershipCar", b =>
                 {
                     b.HasOne("FenzyCars.Data.Models.Car", "Car")
-                        .WithMany()
+                        .WithMany("DealershipCars")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
-                        .WithMany()
+                        .WithMany("DealershipCars")
                         .HasForeignKey("DealershipId");
                 });
 
