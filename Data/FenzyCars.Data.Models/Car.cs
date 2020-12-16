@@ -14,6 +14,7 @@
             this.UserCars = new HashSet<UserCar>();
             this.Images = new HashSet<Image>();
             this.DealershipCars = new HashSet<DealershipCar>();
+            this.CarExtras = new HashSet<CarExtra>();
         }
 
         [Required]
@@ -68,5 +69,7 @@
         public ICollection<UserCar> UserCars { get; set; }
 
         public ICollection<DealershipCar> DealershipCars { get; set; }
+
+        public ICollection<CarExtra> CarExtras { get; set; }
     }
 }

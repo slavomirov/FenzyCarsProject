@@ -26,5 +26,7 @@
         CarsListViewModel GetCarsByUserId(string id, int page, int itemsPerPage = 4);
 
         Task DeleteAsync(int id);
+
+        ICollection<Extra> GetAllExtras();
     }
 }

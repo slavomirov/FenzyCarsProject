@@ -15,7 +15,7 @@
 
     public class UsersService : IUsersService
     {
-        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif" };
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif", "jpeg" };
         private readonly ApplicationDbContext dbContext;
         private readonly UserManager<ApplicationUser> userManager;
 

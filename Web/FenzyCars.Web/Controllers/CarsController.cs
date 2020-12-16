@@ -31,7 +31,11 @@
         [Authorize]
         public IActionResult Add()
         {
-            return this.View();
+            var viewModel = new CarsAddViewModel
+            {
+                Extras = this.carsService.GetAllExtras(),
+            };
+            return this.View(viewModel);
         }
 
         [HttpPost]

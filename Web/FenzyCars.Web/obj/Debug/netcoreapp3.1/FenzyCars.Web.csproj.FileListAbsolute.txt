@@ -507,3 +507,4 @@ C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\All.cshtml.g.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\ById.cshtml.g.cs
 C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\AddCar.cshtml.g.cs
+C:\Users\spart\Desktop\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\Razor\Views\Dealerships\MyDealerships.cshtml.g.cs

@@ -13,6 +13,8 @@
         public CarsAddViewModel()
         {
             this.Images = new HashSet<IFormFile>();
+            this.Extras = new HashSet<Extra>();
+            this.RealExtras = new HashSet<string>();
         }
 
         [Required]
@@ -63,6 +65,10 @@
 
         [Required]
         public IEnumerable<IFormFile> Images { get; set; }
+
+        public ICollection<Extra> Extras { get; set; }
+
+        public ICollection<string> RealExtras { get; set; }
 
         public string UserId { get; set; }
 

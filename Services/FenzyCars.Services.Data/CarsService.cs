@@ -54,6 +54,17 @@
                 UserId = input.UserId,
             };
 
+            //foreach (var extra in input.RealExtras)
+            //{
+            //    var carExtra = new CarExtra
+            //    {
+            //        Car = car,
+            //        Extra = extra,
+            //    };
+
+            //    car.CarExtras.Add(carExtra);
+            //}
+
             Directory.CreateDirectory($"{imagePath}/cars/");
 
             foreach (var image in input.Images)
@@ -191,6 +202,11 @@
             car.DeletedOn = DateTime.UtcNow;
             car.IsDeleted = true;
             await this.dbContext.SaveChangesAsync();
+        }
+
+        public ICollection<Extra> GetAllExtras()
+        {
+            return this.dbContext.Extras.ToList();
         }
 
         private static List<CarsByIdViewModel> Search(CarsSearchViewModel input, List<CarsByIdViewModel> cars)

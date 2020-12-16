@@ -228,6 +228,31 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("Cars");
                 });
 
+            modelBuilder.Entity("FenzyCars.Data.Models.CarExtra", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CarId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CarId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExtraId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId1");
+
+                    b.HasIndex("ExtraId");
+
+                    b.ToTable("CarExtras");
+                });
+
             modelBuilder.Entity("FenzyCars.Data.Models.Dealership", b =>
                 {
                     b.Property<string>("Id")
@@ -323,6 +348,21 @@ namespace FenzyCars.Data.Migrations
                         .HasFilter("[DealershipId] IS NOT NULL");
 
                     b.ToTable("Logos");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.Extra", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Details")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Extras");
                 });
 
             modelBuilder.Entity("FenzyCars.Data.Models.Image", b =>
@@ -647,6 +687,19 @@ namespace FenzyCars.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.CarExtra", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.Car", "Car")
+                        .WithMany("CarExtras")
+                        .HasForeignKey("CarId1");
+
+                    b.HasOne("FenzyCars.Data.Models.Extra", "Extra")
+                        .WithMany("CarExtras")
+                        .HasForeignKey("ExtraId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("FenzyCars.Data.Models.DealershipCar", b =>

@@ -47,6 +47,23 @@
                                 }
                             </ul>
                         </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">Dealerships<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Dealerships" asp-action="All">All dealerships</a>
+                                </li>
+                                @if (this.User.Identity.IsAuthenticated)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Dealerships" asp-action="Add">Add dealership</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Dealerships" asp-action="MyDealerships">My dealerships</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
                         @if (this.User.Identity.IsAuthenticated)
                         {
                             <li class="dropdown">
@@ -60,17 +77,6 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Chat">Global chat</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        <li class="dropdown">
-                                <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false">Dealerships<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Dealerships" asp-action="All">All dealerships</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" asp-area="" asp-controller="Dealerships" asp-action="Add">Add dealership</a>
                                     </li>
                                 </ul>
                             </li>

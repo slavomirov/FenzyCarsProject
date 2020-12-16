@@ -93,8 +93,32 @@
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <hr />
+                <h3>Extras:</h3>
+                <hr />
+                <form name="listForm">
+                    @foreach (var extra in Model.Extras)
+                    {
+                        <input type="checkbox" name="choice" value="@extra.Details" onchange="checkTotal()" />@extra.Details
+                        <hr />
+                    }
+                    @*Total: <input type="text" size="2" name="total" value="0" />*@
+                </form>
                 <button type="submit" class="btn btn-info text-uppercase">Submit</button>
             </form>
         </div>
     </div>
 </section>
+
+
+<script type="text/javascript">
+    function checkTotal() {
+        document.listForm.total.value = '';
+        var sum = 0;
+        for (i = 0; i < Model.Extras.Count(); i++) {
+            if (document.listForm.choice[i].checked) {
+                Model.RealExtras.Add(document.listForm.choice[i].value);
+            }
+        }
+        document.listForm.total.value = sum;
+    }
+</script>
