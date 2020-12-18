@@ -20,6 +20,7 @@
             this.RecievedMessages = new HashSet<RecievedMessage>();
             this.SendedMessages = new HashSet<SendedMessage>();
             this.UserDealerships = new HashSet<UserDealership>();
+            this.Votes = new HashSet<Vote>();
             this.CountOfPosts = 0;
         }
 
@@ -43,6 +44,8 @@
         public ICollection<SendedMessage> SendedMessages { get; set; }
 
         public ICollection<UserDealership> UserDealerships { get; set; }
+
+        public ICollection<Vote> Votes { get; set; }
 
         // Audit info
         public DateTime CreatedOn { get; set; }

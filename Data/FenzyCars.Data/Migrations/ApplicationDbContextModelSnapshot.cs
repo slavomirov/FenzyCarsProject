@@ -585,6 +585,37 @@ namespace FenzyCars.Data.Migrations
                     b.ToTable("UserSendedMessages");
                 });
 
+            modelBuilder.Entity("FenzyCars.Data.Models.Vote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DealershipId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<byte>("Value")
+                        .HasColumnType("tinyint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DealershipId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Votes");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -803,6 +834,17 @@ namespace FenzyCars.Data.Migrations
                     b.HasOne("FenzyCars.Data.Models.ApplicationUser", "Reciever")
                         .WithMany()
                         .HasForeignKey("RecieverId");
+                });
+
+            modelBuilder.Entity("FenzyCars.Data.Models.Vote", b =>
+                {
+                    b.HasOne("FenzyCars.Data.Models.Dealership", "Dealership")
+                        .WithMany("Votes")
+                        .HasForeignKey("DealershipId");
+
+                    b.HasOne("FenzyCars.Data.Models.ApplicationUser", "User")
+                        .WithMany("Votes")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
