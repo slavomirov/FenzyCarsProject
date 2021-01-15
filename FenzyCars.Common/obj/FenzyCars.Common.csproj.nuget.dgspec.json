@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj": {}
+    "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj": {
+    "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj",
+        "projectUniqueName": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj",
         "projectName": "FenzyCars.Common",
-        "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj",
+        "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj",
         "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\obj\\",
+        "outputPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",

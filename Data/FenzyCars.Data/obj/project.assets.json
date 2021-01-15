@@ -6153,11 +6153,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data\\FenzyCars.Data.csproj",
+      "projectUniqueName": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data\\FenzyCars.Data.csproj",
       "projectName": "FenzyCars.Data",
-      "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data\\FenzyCars.Data.csproj",
+      "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data\\FenzyCars.Data.csproj",
       "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data\\obj\\",
+      "outputPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6174,14 +6174,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data.Common\\FenzyCars.Data.Common.csproj": {
-              "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data.Common\\FenzyCars.Data.Common.csproj"
+            "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data.Common\\FenzyCars.Data.Common.csproj": {
+              "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data.Common\\FenzyCars.Data.Common.csproj"
             },
-            "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data.Models\\FenzyCars.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data.Models\\FenzyCars.Data.Models.csproj"
+            "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data.Models\\FenzyCars.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data.Models\\FenzyCars.Data.Models.csproj"
             },
-            "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj": {
-              "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj"
+            "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj": {
+              "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\FenzyCars.Common\\FenzyCars.Common.csproj"
             }
           }
         }

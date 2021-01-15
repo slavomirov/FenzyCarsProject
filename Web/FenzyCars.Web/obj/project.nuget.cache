@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5MOtWAK69iiYFIbXMhyguPhElIiDzu5cMm7Qv+x0T1qyqSnaCqg3YSz5E0JW0iekWo1OW+EqWYr/3/5z7b5fTw==",
+  "dgSpecHash": "gZIw/cLn4HpivXLwGEn9GGkrNw1ei8KfSOA+sEIBG1pjwlIQ1OQAn05fdDD+tlcGHKdLjssOZ5QbeYfJdALpxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\bootstrap\\4.5.3\\bootstrap.4.5.3.nupkg.sha512",

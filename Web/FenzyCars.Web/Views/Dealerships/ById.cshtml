@@ -1,0 +1,123 @@
+﻿@{
+    this.ViewData["Title"] = "All cars";
+}
+
+@using FenzyCars.Web.ViewModels.Cars;
+
+@model FenzyCars.Web.ViewModels.CarDealerships.DealershipsByIdListViewModel
+
+@if (Model.LoggedUserId == Model.OwnerId)
+{
+    <div>
+        <a class="btn btn-info btn-pill" asp-controller="Dealerships" asp-action="AddCar" asp-route-dealershipId="@Model.DealershipId">Add new car</a>
+    </div>
+    <div>
+        <form method="post" asp-action="Delete" id="deleteForm" asp-route-id="@Model.DealershipId">
+        </form>
+        <button class="btn btn-danger btn-pill" data-toggle="modal" data-target="#deleteModal">Delete dealership</button>
+    </div>
+}
+
+<hr />
+<li class="media">
+    <img src="@Model.Info.Logo.RemoteImageUrl" width="250" class="mr-3 img-responsive" alt="LOGO UNAVAILABLE">
+    <div class="media-body">
+        <h5 class="mt-0">@Model.Info.Name Dealership</h5>
+        <br />
+        <h5>@Model.Info.Description</h5>
+        <br />
+        <h5>City: @Model.Info.City</h5>
+        <br />
+        <h5>Contact: @Model.Info.PhoneNumber</h5>
+    </div>
+</li>
+<li class="single-meta row">
+    <ul class="item-rating row">
+        <li class="star-fill" data-vote="1"><i class="fas fa-star"></i></li>
+        <li class="star-fill" data-vote="2"><i class="fas fa-star"></i></li>
+        <li class="star-fill" data-vote="3"><i class="fas fa-star"></i></li>
+        <li class="star-fill" data-vote="4"><i class="fas fa-star"></i></li>
+        <li class="star-fill" data-vote="5"><i class="fas fa-star"></i></li>
+        <li><span>4.5</span><span> / 5</span> </li>
+    </ul>
+</li>
+<hr />
+<h1>Cars:</h1>
+<ul class="list-unstyled">
+    @foreach (var car in Model.Cars)
+    {
+        <li class="media">
+            <img src="@car.ImageUrl" width="250" class="mr-3 img-responsive" alt="@car.ImageUrl">
+            <div class="media-body">
+                <h5 class="mt-0"><a asp-controller="Cars" asp-action="ById" asp-route-id="@car.Id">@string.Concat(car.Make, " ", car.Model)</a></h5>
+                @car.Description
+                <hr />
+                Price: @car.Price
+                @*City: @car.UserCity*@
+            </div>
+        </li>
+        <hr />
+    }
+</ul>
+
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        @if (Model.PageNumber > 1)
+        {
+            <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="1">First</a></li>
+        }
+        <li class="page-item @if (!Model.HasPreviousPage) { <text>disabled</text> }">
+            <a class="page-link" asp-action="All" asp-route-id="@Model.PreviousPageNumber">Previous</a>
+        </li>
+        <li class="page-item active" aria-current="page">
+            <span class="page-link">
+                @Model.PageNumber
+                <span class="sr-only">(current)</span>
+            </span>
+        </li>
+        <li class="page-item @if (!Model.HasNextPage) { <text>disabled</text> }">
+            <a class="page-link" asp-action="All" asp-route-id="@Model.NextPageNumber">Next</a>
+        </li>
+        @if (Model.PageNumber < Model.PagesCount)
+        {
+            <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@Model.PagesCount">Last</a></li>
+        }
+    </ul>
+</nav>
+
+<div class="modal" tabindex="-1" role="dialog" id="deleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Do you want to delete the dealership?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="deleteForm.submit()">Yes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $("li[data-vote]").each(function (el) {
+            $(this).click(function () {
+                var value = $(this).attr("data-vote");
+                //var dealershipId = ;
+                //var data = { dealershipId: dealershipId, value: value }
+
+                $.ajax({
+                    dataType: "jsonp",
+                    type: "POST",
+                    url: "/api/Votes",
+                    data: { dealershipId: @Model.DealershipId, value: value },
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    contentType: 'application/json',
+                })
+            });
+        });
+    </script>
+}

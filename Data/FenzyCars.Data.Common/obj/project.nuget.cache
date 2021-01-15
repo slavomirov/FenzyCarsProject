@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YddV07VCeMbTi0etefUlcta08PhrF8cuwWjRFRbdk5D3ejUn2wghXZpP1xN5GEjN27Ns3WCpJ0McBQ+ag3jPmA==",
+  "dgSpecHash": "Yf8tizMnK4utAYJR0TaQmJGrf07JrLZO/0wfuEeseBHygm5/Tw4rO8FWmXcGno9QshQ8jShNdcrvFsukl8yd8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data.Common\\FenzyCars.Data.Common.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data.Common\\FenzyCars.Data.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",

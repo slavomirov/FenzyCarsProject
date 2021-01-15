@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj": {}
+    "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj": {
+    "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj",
         "projectName": "FenzyCars.Web.Infrastructure",
-        "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\FenzyCars.Web.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",

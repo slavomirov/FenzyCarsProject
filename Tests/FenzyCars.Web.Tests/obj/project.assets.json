@@ -11620,11 +11620,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Tests\\FenzyCars.Web.Tests\\FenzyCars.Web.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Tests\\FenzyCars.Web.Tests\\FenzyCars.Web.Tests.csproj",
       "projectName": "FenzyCars.Web.Tests",
-      "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Tests\\FenzyCars.Web.Tests\\FenzyCars.Web.Tests.csproj",
+      "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Tests\\FenzyCars.Web.Tests\\FenzyCars.Web.Tests.csproj",
       "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Tests\\FenzyCars.Web.Tests\\obj\\",
+      "outputPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Tests\\FenzyCars.Web.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11641,8 +11641,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj": {
-              "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj"
+            "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj": {
+              "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web\\FenzyCars.Web.csproj"
             }
           }
         }

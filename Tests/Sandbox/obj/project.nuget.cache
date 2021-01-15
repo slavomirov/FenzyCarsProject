@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7eufo7wGL33lX0dYQ/X7nWQTvoV9uSSHm5aNhACDrNXCwlM90vMGvFV5zyUNwapNcaxXGz20TGxaaWc+28T4eA==",
+  "dgSpecHash": "PONhYobH6rXPJz3fD5SgmKxsQxY7tc2frKpvc9rg5KlBEzSc87TyElqHUQpwR0BVRaC4jH/XYTOidzI88Ek4Ig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",

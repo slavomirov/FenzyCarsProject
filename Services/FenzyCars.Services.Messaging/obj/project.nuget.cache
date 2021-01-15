@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sgjGkdm6UaA7t2cAhypUvfsHmmt2tO2T0hB6nHoGC9d/rvzSk2HgssLJkbnLeCeJ/qX0W1CMzwJF28T5GqYHRg==",
+  "dgSpecHash": "nYMCeW2p+iSLcIEZFPXklsCcTL+UbVImMa4ekDNhR98v8v2xc7nLkvO3hy0Q6efZyqUJfqBbu8nQ1XuZW4uBNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

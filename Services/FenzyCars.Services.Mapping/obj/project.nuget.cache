@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0yZ+aSWrzg1F6gSZVz9AS3hYMQtBhgTqlNSmHOIxqPogAe4EvOzedWojrycGEkIxxGhIxLbDCfNyPq+agUI0ww==",
+  "dgSpecHash": "o3Wam2GmkacxtBXLwh0RM6gAAyBndxQ5/WXBudeWPidByX38W6F3VHBUy4t6ldQVZ5FQnp+ZutZTXRcANynfIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Mapping\\FenzyCars.Services.Mapping.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Mapping\\FenzyCars.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

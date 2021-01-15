@@ -1,0 +1,100 @@
+﻿@using FenzyCars.Data.Models.Enums
+@using System.ComponentModel.DataAnnotations
+@using FenzyCars.Web.ViewModels.Cars;
+
+@model CarsAddViewModel
+
+@{
+    this.ViewData["Title"] = "Add Car";
+}
+
+<section class="py-5">
+    <div class="container">
+        <h1 style="margin: 2%; text-align: center;">Add Car</h1>
+        <div style="padding: 5%;">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Make"></label>
+                    <input asp-for="Make" class="form-control" />
+                    <span asp-validation-for="Make" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Model"></label>
+                    <input asp-for="Model" class="form-control" />
+                    <span asp-validation-for="Model" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Color"></label>
+                    <input asp-for="Color" class="form-control" />
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mileage"></label>
+                    <input asp-for="Mileage" class="form-control" type="number" min="0" max="@int.MaxValue" />
+                    <span asp-validation-for="Mileage" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Hp"></label>
+                    <input asp-for="Hp" class="form-control" type="number" min="0" max="1000" />
+                    <span asp-validation-for="Hp" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Seats"></label>
+                    <input asp-for="Seats" class="form-control" type="number" min="1" max="7" />
+                    <span asp-validation-for="Seats" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Doors"></label>
+                    <input asp-for="Doors" class="form-control" type="number" min="2" max="6" />
+                    <span asp-validation-for="Doors" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Transmission">Transmisson</label>
+                    @Html.DropDownListFor(m => m.Transmission, Html.GetEnumSelectList<Transmission>(),
+                "Select transmission",
+                new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="BodyType">Body Type</label>
+                    @Html.DropDownListFor(m => m.BodyType, Html.GetEnumSelectList<BodyType>(),
+               "Select fuel type",
+               new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="FuelType">Fuel Type</label>
+                    @Html.DropDownListFor(m => m.FuelType, Html.GetEnumSelectList<FuelType>(),
+              "Select fuel type",
+              new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="EngineSize">Engine Size</label>
+                    <input asp-for="EngineSize" class="form-control" type="number" min="0" max="@int.MaxValue" />
+                    <span asp-validation-for="EngineSize" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Year"></label>
+                    <input asp-for="Year" class="form-control" type="number" min="1900" max="@DateTime.Now.Year" />
+                    <span asp-validation-for="Year" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price"></label>
+                    <input asp-for="Price" class="form-control" type="number" min="1"/>
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Images"></label>
+                    <input asp-for="Images" class="form-control" />
+                    <span asp-validation-for="Images" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <hr />
+                <button type="submit" class="btn btn-info text-uppercase">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

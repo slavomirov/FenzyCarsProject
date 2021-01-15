@@ -20,12 +20,10 @@
     {
         private readonly string[] allowedExtensions = new[] { "jpg", "png", "gif", "jpeg" };
         private readonly ApplicationDbContext dbContext;
-        private readonly Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager;
 
-        public CarsService(ApplicationDbContext dbContext, UserManager<ApplicationUser> userManager)
+        public CarsService(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
-            this.userManager = userManager;
         }
 
         public async Task AddAsync(CarsAddViewModel input, string imagePath)

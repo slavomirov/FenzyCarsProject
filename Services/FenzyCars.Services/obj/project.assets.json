@@ -65,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services\\FenzyCars.Services.csproj",
+      "projectUniqueName": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services\\FenzyCars.Services.csproj",
       "projectName": "FenzyCars.Services",
-      "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services\\FenzyCars.Services.csproj",
+      "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services\\FenzyCars.Services.csproj",
       "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services\\obj\\",
+      "outputPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",

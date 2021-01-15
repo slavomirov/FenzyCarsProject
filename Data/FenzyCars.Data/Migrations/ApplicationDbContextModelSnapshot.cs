@@ -360,6 +360,9 @@ namespace FenzyCars.Data.Migrations
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Selected")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("Extras");

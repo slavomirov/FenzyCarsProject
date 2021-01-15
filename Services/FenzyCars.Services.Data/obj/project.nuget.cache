@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JQ+bi1w8+rUzndaQ+wAPM9UKYl1eOldpKQba/bJOpDHePpHuqJGGzsfJDx1kXWQjTZKoUnVibhR/U49CKR38bQ==",
+  "dgSpecHash": "nx9Mnd//k93cpQGrFHiBBqHCrFRCZjEZ2F5nLLmGyNuCZZ8KacVlOAAb9FbzIyOEBJyRFKt1MymzCGwO6hbfyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Data\\FenzyCars.Services.Data.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Data\\FenzyCars.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

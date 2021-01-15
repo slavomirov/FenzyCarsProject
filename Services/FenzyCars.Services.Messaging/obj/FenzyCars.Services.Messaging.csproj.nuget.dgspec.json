@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj": {}
+    "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj": {
+    "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj",
+        "projectUniqueName": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj",
         "projectName": "FenzyCars.Services.Messaging",
-        "projectPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj",
+        "projectPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\FenzyCars.Services.Messaging.csproj",
         "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\obj\\",
+        "outputPath": "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",
