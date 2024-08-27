@@ -30,11 +30,13 @@ C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\bin\Debug\ne
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\bin\Debug\netcoreapp3.1\FenzyCars.Common.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\bin\Debug\netcoreapp3.1\FenzyCars.Data.Common.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\bin\Debug\netcoreapp3.1\FenzyCars.Data.Models.pdb
-C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.csprojAssemblyReference.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.AssemblyInfoInputs.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.AssemblyInfo.cs
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.csproj.CoreCompileInputs.cache
-C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.csproj.CopyComplete
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.dll
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.genruntimeconfig.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.csproj.AssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCars.Data.sourcelink.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data\obj\Debug\netcoreapp3.1\FenzyCar.0036EDA9.Up2Date

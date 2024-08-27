@@ -7,3 +7,12 @@ C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Messaging\ob
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.csproj.CoreCompileInputs.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\bin\Release\netstandard2.1\FenzyCars.Services.Messaging.deps.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\bin\Release\netstandard2.1\FenzyCars.Services.Messaging.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\bin\Release\netstandard2.1\FenzyCars.Services.Messaging.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.AssemblyInfo.cs
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Messaging\obj\Release\netstandard2.1\FenzyCars.Services.Messaging.pdb

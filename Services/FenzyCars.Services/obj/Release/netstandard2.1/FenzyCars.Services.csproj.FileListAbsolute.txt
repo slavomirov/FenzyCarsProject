@@ -7,3 +7,12 @@ C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.csproj.CoreCompileInputs.cache
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\bin\Release\netstandard2.1\FenzyCars.Services.deps.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\bin\Release\netstandard2.1\FenzyCars.Services.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\bin\Release\netstandard2.1\FenzyCars.Services.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.AssemblyInfo.cs
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services\obj\Release\netstandard2.1\FenzyCars.Services.pdb

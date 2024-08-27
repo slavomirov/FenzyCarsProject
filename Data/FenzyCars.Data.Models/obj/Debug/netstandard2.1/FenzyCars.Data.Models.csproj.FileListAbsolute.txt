@@ -10,3 +10,17 @@ C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\net
 C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.csproj.CopyComplete
 C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Debug\netstandard2.1\FenzyCars.Data.Models.deps.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Debug\netstandard2.1\FenzyCars.Data.Models.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Debug\netstandard2.1\FenzyCars.Data.Models.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Debug\netstandard2.1\FenzyCars.Data.Common.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\bin\Debug\netstandard2.1\FenzyCars.Data.Common.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.AssemblyInfo.cs
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.csproj.AssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCars.Data.Models.sourcelink.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Models\obj\Debug\netstandard2.1\FenzyCar.96C5BB11.Up2Date

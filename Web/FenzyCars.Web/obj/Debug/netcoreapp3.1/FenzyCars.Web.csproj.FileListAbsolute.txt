@@ -958,7 +958,6 @@ C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netc
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netcoreapp3.1\FenzyCars.Web.Infrastructure.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netcoreapp3.1\FenzyCars.Web.ViewModels.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\bin\Debug\netcoreapp3.1\FenzyCars.Data.Common.pdb
-C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.csprojAssemblyReference.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.AssemblyInfoInputs.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.AssemblyInfo.cs
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.csproj.CoreCompileInputs.cache
@@ -968,7 +967,6 @@ C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netc
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.RazorAssemblyInfo.cs
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\FenzyCars.Web.StaticWebAssets.Manifest.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\FenzyCars.Web.StaticWebAssets.xml
-C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\FenzyCars.Web.styles.css
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.TagHelpers.input.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.TagHelpers.output.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.RazorCoreGenerate.cache
@@ -1026,7 +1024,15 @@ C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netc
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.RazorTargetAssemblyInfo.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.RazorTargetAssemblyInfo.cs
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.Views.pdb
-C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.csproj.CopyComplete
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.dll
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.genruntimeconfig.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.csproj.AssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\FenzyCars.Web.StaticWebAssets.Pack.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.FenzyCars.Web.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.FenzyCars.Web.props
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.FenzyCars.Web.props
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.FenzyCars.Web.props
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCars.Web.sourcelink.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Web\FenzyCars.Web\obj\Debug\netcoreapp3.1\FenzyCar.D1EC36A1.Up2Date

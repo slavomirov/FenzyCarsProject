@@ -37,10 +37,12 @@ C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\bin\Debug\netcoreapp3.1\FenzyCars.Web.ViewModels.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\bin\Debug\netcoreapp3.1\FenzyCars.Services.Mapping.pdb
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\bin\Debug\netcoreapp3.1\FenzyCars.Common.pdb
-C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.csprojAssemblyReference.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.AssemblyInfoInputs.cache
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.AssemblyInfo.cs
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.csproj.CoreCompileInputs.cache
-C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.csproj.CopyComplete
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.dll
 C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.csproj.AssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCars.Services.Data.sourcelink.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Services\FenzyCars.Services.Data\obj\Debug\netcoreapp3.1\FenzyCar.8418C3BD.Up2Date

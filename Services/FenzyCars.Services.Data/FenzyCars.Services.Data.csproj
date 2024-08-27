@@ -1,23 +1,22 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\spart\Desktop\project\FenzyCarsProject\Backup\Services\FenzyCars.Services.Data\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\Data\FenzyCars.Data.Common\FenzyCars.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\FenzyCars.Data.Models\FenzyCars.Data.Models.csproj" />
@@ -25,5 +24,4 @@
     <ProjectReference Include="..\..\Web\FenzyCars.Web.ViewModels\FenzyCars.Web.ViewModels.csproj" />
     <ProjectReference Include="..\FenzyCars.Services.Mapping\FenzyCars.Services.Mapping.csproj" />
   </ItemGroup>
-
 </Project>

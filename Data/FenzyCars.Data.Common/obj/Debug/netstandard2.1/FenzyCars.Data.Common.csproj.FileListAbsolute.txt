@@ -7,3 +7,14 @@ C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\net
 C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.dll
 C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.pdb
 C:\Users\spart\Desktop\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.csprojAssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\bin\Debug\netstandard2.1\FenzyCars.Data.Common.deps.json
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\bin\Debug\netstandard2.1\FenzyCars.Data.Common.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\bin\Debug\netstandard2.1\FenzyCars.Data.Common.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.AssemblyInfoInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.AssemblyInfo.cs
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.csproj.CoreCompileInputs.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.dll
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.pdb
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.csproj.AssemblyReference.cache
+C:\Users\spart\Desktop\project\FenzyCarsProject\Data\FenzyCars.Data.Common\obj\Debug\netstandard2.1\FenzyCars.Data.Common.sourcelink.json

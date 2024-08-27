@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("FenzyCars.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Data\\FenzyCars.Data", "FenzyCars.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("FenzyCars.Services.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Services\\FenzyCars.Services.Data", "FenzyCars.Services.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("FenzyCars.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\spart\\Desktop\\FenzyCarsProject\\Web\\FenzyCars.Web", "FenzyCars.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("FenzyCars.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Data\\FenzyCars.Data", "FenzyCars.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("FenzyCars.Services.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Services\\FenzyCars.Services.Data", "FenzyCars.Services.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("FenzyCars.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\spart\\Desktop\\project\\FenzyCarsProject\\Web\\FenzyCars.Web", "FenzyCars.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FenzyCars.Services.Data.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
